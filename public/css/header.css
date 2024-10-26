@@ -1,0 +1,175 @@
+/* Variables */
+
+:root{
+    --fade-in-delay:1.4s
+}
+
+/* Reset css */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style-type:none;
+    color: inherit;
+}
+
+body {
+    background-color: var(--first-color);
+    font-family: var(--main-typo);
+
+}
+
+body::before {
+    content: ""; 
+    position: fixed; 
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url("../../asset/texture_bg.jpg"); 
+    background-size:contain;
+    background-position: center;
+    opacity: 0.08;
+}
+
+.header_hero{
+    height: 100vh;
+}
+
+.header{
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    background-color: var(--second-color);
+    padding: 10px 30px;
+    position: fixed;
+    width: 100%;
+    animation: comingtop var(--fade-in-delay) ease-out ;
+}
+
+.header .small-logo{
+    width: 40px;
+}
+
+.header .navbar{
+    display: flex;
+}
+
+.header .navbar .link{
+    margin:0 20px;
+    color: var(--first-color);
+}
+
+.scrollbar{
+    width: 100%;
+    height: 6px;
+    background-color: #879767;
+    position: fixed;
+    margin-top: 60px;
+    left: -100%;
+}
+
+.hero{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 120px 0 50px 0;
+    height: 100vh;
+    justify-content:space-between ;
+    color: var(--second-color);
+}
+
+.hero .logo{
+    width: 260px;
+    animation: comingleft var(--fade-in-delay) ease-out alternate;
+}
+
+.hero .logo img{
+    width: 100%;
+}
+
+.hero .hero-container{
+    max-width: 400px;
+    display: flex;
+    flex-direction: column ;
+    align-items: center;
+    gap: 15px;
+}
+
+.hero .hero-container h1{
+    animation: comingright var(--fade-in-delay) ease-out;
+    font-size: 45px;
+}
+
+.hero .hero-container p{
+    text-align: center;
+    animation: comingleft var(--fade-in-delay) ease-out;
+    font-family: var(--second-typo);
+}
+
+.hero .cta{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    animation: fade-in var(--fade-in-delay) ease-out;
+}
+
+.hero .cta .arrow-down{
+    width: 60px;
+    animation: pulse 1.2s infinite ease-in-out alternate;
+    
+    transition: all .2s ease-in-out;
+}
+
+
+/* Hover effect */
+
+.header .navbar .link:hover{
+    color: #879767;
+    transition: all .1s ease-in-out;
+    
+}
+
+.header .login:hover{
+    scale: 1.15;
+}
+
+.hero .cta .arrow-down:hover{
+    scale: 1.2;
+}
+
+/* Keyframes */
+
+  @keyframes pulse {
+    from, to { transform: scale(1, 1); }
+    25% { transform: scale(0.9, 1.1); }
+    50% { transform: scale(1.1, 0.9); }
+    75% { transform: scale(0.95, 1.05); }
+  }
+
+  @keyframes comingtop {
+    from { transform:translateY(-200px); }
+  to { transform:translateY(0px); }
+    
+  }
+  
+  
+  @keyframes comingleft {
+    from { transform:translateX(-1200px); }
+  to { transform:translateX(0px); }
+    
+  }
+
+  @keyframes comingright {
+    from { transform:translateX(1200px); }
+  to { transform:translateX(0px); }
+    
+  }
+
+  @keyframes fade-in {
+    from { scale: 0; }
+  to { scale: 1; }
+    
+  }
