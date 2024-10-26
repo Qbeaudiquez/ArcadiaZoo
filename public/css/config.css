@@ -19,3 +19,13 @@
     --second-typo:"Indie Flower", serif;
 }
 
+/* Remove scrollbar */
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+body {
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
