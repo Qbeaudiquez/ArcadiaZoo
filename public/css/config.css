@@ -1,0 +1,45 @@
+/* Reset css */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style-type:none;
+    color: inherit;
+}
+
+/* Typology */
+
+
+@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&family=Quicksand:wght@300..700&display=swap');
+
+/* Varible */
+
+:root{
+
+    /* Colors */
+
+    --first-color:#D8E3C7;
+    --second-color:#485C35;
+    --third-color:#879767;
+
+    /* Typology */
+
+    --main-typo:"Quicksand", sans-serif;
+    --second-typo:"Indie Flower", serif;
+}
+
+/* Remove scrollbar */
+/* Color and typo Initialisation*/
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+body {
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    background-color: var(--first-color);
+    font-family: var(--main-typo);
+}
