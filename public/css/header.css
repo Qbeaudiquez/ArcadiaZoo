@@ -4,23 +4,6 @@
     --fade-in-delay:1.4s
 }
 
-/* Reset css */
-
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    text-decoration: none;
-    list-style-type:none;
-    color: inherit;
-}
-
-body {
-    background-color: var(--first-color);
-    font-family: var(--main-typo);
-
-}
-
 body::before {
     content: ""; 
     position: fixed; 

@@ -1,3 +1,14 @@
+/* Reset css */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style-type:none;
+    color: inherit;
+}
+
 /* Typology */
 
 
@@ -20,6 +31,7 @@
 }
 
 /* Remove scrollbar */
+/* Color and typo Initialisation*/
 
 ::-webkit-scrollbar {
     display: none;
@@ -28,4 +40,6 @@
 body {
     scrollbar-width: none;
     -ms-overflow-style: none;
+    background-color: var(--first-color);
+    font-family: var(--main-typo);
 }
