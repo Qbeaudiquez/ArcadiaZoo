@@ -51,6 +51,9 @@
     background-color: #879767;
     position: fixed;
     margin-top: 60px;
+    animation: comingtop var(--fade-in-delay) ease-out ;
+    z-index: 3;
+    transition: width .2s ease-in-out;
 }
 
 .hero{
