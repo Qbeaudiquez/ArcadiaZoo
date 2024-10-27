@@ -8,11 +8,13 @@ function loadHTML(elementId, filePath) {
         })
         .then(data => {
             document.getElementById(elementId).innerHTML = data;
+            // Le JavaScript à l'intérieur de header.html s'exécutera maintenant
         })
         .catch(error => {
             console.error('Erreur:', error);
         });
 }
-    loadHTML('header', 'header.html');
-    loadHTML('footer', 'footer.html');
-    
+
+// Chargez le header et le footer
+loadHTML('header', 'header.html');
+loadHTML('footer', 'footer.html');
