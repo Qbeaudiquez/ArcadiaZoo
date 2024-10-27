@@ -1,0 +1,98 @@
+.carousel-container{
+    width: 100%;
+    display: flex;
+    padding-top: 60px;
+    margin-top: 40px;
+}
+
+.carousel-container .text-carousel{
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 30px;
+    color: var(--second-color);
+}
+
+.carousel-container .text-carousel h2{
+    font-size: 34px;
+}
+
+.carousel-container .carousel{
+    width: 50%;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+
+}
+
+.carousel-container .carousel .btn {
+    position: absolute;
+    z-index: 2;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.488);
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.carousel-container .carousel .btn img{
+    width: 30px;
+}
+
+.carousel-container .carousel .btn.before{
+    left: 5px;
+}
+
+.carousel-container .carousel .btn.after{
+    right: 5px;
+}
+
+.carousel-container .carousel .carousel-image{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: 
+    opacity 0.4s ease-in-out,
+    transform 0.2s ease-in-out,
+    filter 0.2s ease-in-out ;
+    object-fit:cover;
+    object-position: left;
+    
+}
+.carousel-container .carousel .carousel-image.active{
+    opacity: 1;
+    z-index: 1;
+}
+
+.carousel-container .carousel .title-img{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    font-size: 30px;
+    margin-top: 30px;
+    opacity: 0;
+    transition: opacity 0.4s ease-in-out;
+}
+
+.carousel-container .carousel .title-img.active{
+    opacity: 1;
+}
+
+/* Hover effects*/
+
+.carousel-container .carousel:hover .carousel-image.active{
+    transform: scale(1.05);
+    filter: blur(4px);
+}

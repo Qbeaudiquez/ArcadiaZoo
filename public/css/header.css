@@ -4,17 +4,16 @@
     --fade-in-delay:1.4s
 }
 
-body::before {
-    content: ""; 
-    position: fixed; 
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-image: url("../../asset/texture_bg.jpg"); 
-    background-size:contain;
-    background-position: center;
-    opacity: 0.08;
+
+
+.goup{
+    position: fixed;
+    z-index: 10;
+    bottom: 5px;
+    right: 5px;
+    width: 40px;
+
+
 }
 
 .header_hero{
@@ -30,6 +29,7 @@ body::before {
     position: fixed;
     width: 100%;
     animation: comingtop var(--fade-in-delay) ease-out ;
+    z-index: 10;
 }
 
 .header .small-logo{
@@ -46,12 +46,11 @@ body::before {
 }
 
 .scrollbar{
-    width: 100%;
+    width: 0%;
     height: 6px;
     background-color: #879767;
     position: fixed;
     margin-top: 60px;
-    left: -100%;
 }
 
 .hero{
@@ -64,14 +63,6 @@ body::before {
     color: var(--second-color);
 }
 
-.hero .logo{
-    width: 260px;
-    animation: comingleft var(--fade-in-delay) ease-out alternate;
-}
-
-.hero .logo img{
-    width: 100%;
-}
 
 .hero .hero-container{
     max-width: 400px;
@@ -79,16 +70,23 @@ body::before {
     flex-direction: column ;
     align-items: center;
     gap: 15px;
+    animation: fade-in var(--fade-in-delay) ease-out alternate;
+}
+
+.hero .hero-container .logo{
+    width: 260px;
+}
+
+.hero .hero-container .logo img{
+    width: 100%;
 }
 
 .hero .hero-container h1{
-    animation: comingright var(--fade-in-delay) ease-out;
     font-size: 45px;
 }
 
 .hero .hero-container p{
     text-align: center;
-    animation: comingleft var(--fade-in-delay) ease-out;
     font-family: var(--second-typo);
 }
 
@@ -96,7 +94,7 @@ body::before {
     display: flex;
     flex-direction: column;
     align-items: center;
-    animation: fade-in var(--fade-in-delay) ease-out;
+    animation: comingdown var(--fade-in-delay) ease-out;
 }
 
 .hero .cta .arrow-down{
@@ -138,18 +136,12 @@ body::before {
     
   }
   
-  
-  @keyframes comingleft {
-    from { transform:translateX(-1200px); }
-  to { transform:translateX(0px); }
+  @keyframes comingdown {
+    from { transform:translateY(200px); }
+  to { transform:translateY(0px); }
     
   }
 
-  @keyframes comingright {
-    from { transform:translateX(1200px); }
-  to { transform:translateX(0px); }
-    
-  }
 
   @keyframes fade-in {
     from { scale: 0; }
