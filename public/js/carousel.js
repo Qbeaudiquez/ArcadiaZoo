@@ -1,67 +1,60 @@
-// Select DOM items
-const infoImgCarousel = document.querySelector(".title-img")
-const carousel = document.querySelector(".carousel")
-const images = [...document.querySelectorAll(".carousel-image")]
-const before = document.querySelector(".before")
-const after = document.querySelector(".after")
+function initCarousel(carouselId) {
+    const carousel = document.querySelector(`#${carouselId}`);
+    const images = [...carousel.querySelectorAll(".carousel-image")];
+    const before = carousel.querySelector(".before");
+    const after = carousel.querySelector(".after");
+    const infoImgCarousel = carousel.querySelector(".title-img");
 
-// start index
-let index = 0
+    let index = 0;
+    let intervalID;
 
-// Events listener
+    // Function to update the displayed image and title
+    function setInfo() {
+        const active = carousel.querySelector(".carousel-image.active");
+        const title = active.getAttribute("data-title");
+        infoImgCarousel.textContent = title;
+        infoImgCarousel.classList.add("active");
+    }
 
-after.addEventListener("click", () => {
-    images.forEach(image => {
-        image.classList.remove("active")
+    // Function to start the automatic carousel
+    function startInterval() {
+        intervalID = setInterval(() => {
+            images.forEach(image => image.classList.remove("active"));
+            index = (index + 1) % images.length;
+            images[index].classList.add("active");
+        }, 3000);
+    }
+
+    // Event Listeners
+    after.addEventListener("click", () => {
+        images.forEach(image => image.classList.remove("active"));
+        index = (index + 1) % images.length;
+        images[index].classList.add("active");
+        setInfo();
     });
-    index += 1
-    if(index === images.length) index = 0
-    images[index].classList.add("active")
-    setInfo()
-})
 
-before.addEventListener("click", () => {
-    images.forEach(image => {
-        image.classList.remove("active")
+    before.addEventListener("click", () => {
+        images.forEach(image => image.classList.remove("active"));
+        index = (index - 1 + images.length) % images.length;
+        images[index].classList.add("active");
+        setInfo();
     });
-    if(index === 0) index = images.length
-    index -= 1
-    images[index].classList.add("active")
-    setInfo()
-})
 
-// Auto carousel
-let intervalID
+    carousel.addEventListener("mouseover", () => {
+        clearInterval(intervalID);
+        setInfo();
+    });
 
-function startInterval(){
-    intervalID = setInterval(()=>{
-        images.forEach(image => {
-            image.classList.remove("active")
-        });
-        index += 1
-        if(index === images.length) index = 0
-        images[index].classList.add("active")
-    }, 3000)
+    carousel.addEventListener("mouseout", () => {
+        startInterval();
+        infoImgCarousel.classList.remove("active");
+    });
+
+    // Initialize
+    startInterval();
 }
 
-startInterval()
-
-function setInfo(){
-    const active = document.querySelector(".active")
-    const title = active.getAttribute("data-title")
-    infoImgCarousel.textContent = title
-    infoImgCarousel.classList.add("active")
-}
-
-carousel.addEventListener("mouseover", () => {
-    clearInterval(intervalID)
-    setInfo()
-    
-})
-
-carousel.addEventListener("mouseout", () => {
-    startInterval()
-    infoImgCarousel.classList.remove("active")
-})
-
+// Initialize both carousels
+initCarousel("carousel1");
+initCarousel("carousel2");
 

@@ -6,19 +6,42 @@
     <title>Zoo Arcadia</title>
     <link rel="stylesheet" href="../css/config.css">
     <link rel="stylesheet" href="../css/index.css">
-    <script src="../js/loader.js"></script>
+    <script src="../js/loader.js" ></script>
     <script src="../js/carousel.js" defer></script>
 </head>
 <body>
-    <a href="#scrollup"><img src="../../asset/icon/arrow-up-circle.svg" alt="" class="goup"></a>
     <div id="header"></div>
     <main id="scrolldown">
+
+            <!-- First carousel -->
+
         <div class="carousel-container">
             <div class="text-carousel">
-                <h2>Habitats</h2>
-                <p>Venez decouvrir nos animaux du parc à travers leur habitat</p>
+                <h2>Services</h2>
+                <p>Venez decouvrir tous nos services du parc</p>
             </div>
-            <div class="carousel">
+            <div class="carousel" id="carousel1">
+
+                <button class="btn before"><img src="../../asset/icon/arrow-left.svg" alt="Bouton précédent"></button>
+
+                <button class="btn after"><img src="../../asset/icon/arrow-right.svg" alt="Bouton suivant"></button>
+
+                <a href=""><img src="../../asset/img_service/restaurant.jpeg" alt="Photo de notre restaurant" class="carousel-image active" data-title="Notre restaurant"></a>
+
+                <a href=""><img src="../../asset/img_service/petit-train.jpeg" alt="Photo du petit train" class="carousel-image" data-title="Tour du parc en un petit train"></a>
+
+                <a href=""><img src="../../asset/img_service/guide-touristique.jpeg" alt="Photo du guide touristique" class="carousel-image" data-title="Faite une visite guidé avec notre équipe de soigneur"></a>
+
+                <div class="title-img"></div>
+                  
+            </div>
+        </div>
+
+            <!-- Second carousel -->
+
+        <div class="carousel-container carousel-container2">
+            
+            <div class="carousel" id="carousel2">
 
                 <button class="btn before"><img src="../../asset/icon/arrow-left.svg" alt="Bouton précédent"></button>
 
@@ -37,6 +60,12 @@
                 <div class="title-img"></div>
                   
             </div>
+
+            <div class="text-carousel">
+                <h2>Habitats</h2>
+                <p>Venez decouvrir nos animaux du parc à travers leur habitat</p>
+            </div>
+            
         </div>
             
     </main>
