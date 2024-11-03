@@ -1,4 +1,11 @@
-const scrollBar = document.querySelector(".scrollbar")
+
+
+
+const scrollBar = document.createElement("div")
+scrollBar.id = "scrollbar"
+const header = document.querySelector(".header")
+console.log(header)
+header.appendChild(scrollBar)
 
 document.addEventListener("scroll", () => {
 
