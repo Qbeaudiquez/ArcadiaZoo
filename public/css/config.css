@@ -9,7 +9,7 @@
     color: inherit;
 }
 
-/* Typology */
+/* Import typology */
 
 
 @import url('https://fonts.googleapis.com/css2?family=Indie+Flower&family=Quicksand:wght@300..700&display=swap');
@@ -31,11 +31,26 @@
 }
 
 /* Remove scrollbar */
-/* Color, typo and background Initialisation*/
+
 
 ::-webkit-scrollbar {
     display: none;
 }
+
+/* Initialize new scrollbar */
+
+.scrollbar{
+    width: 0%;
+    height: 6px;
+    background-color: #879767;
+    position: fixed;
+    margin-top: 60px;
+    animation: comingtop var(--fade-in-delay) ease-out ;
+    z-index: 3;
+    transition: width .2s ease-in-out;
+}
+
+/* Color, typo and background Initialisation*/
 
 body {
     scrollbar-width: none;
@@ -55,4 +70,16 @@ body::before {
     background-size:contain;
     background-position: center;
     opacity: 0.08;
+}
+
+/* Go up */
+
+.goup{
+    position: fixed;
+    z-index: 2;
+    bottom: 5px;
+    right: 5px;
+    width: 40px;
+
+
 }

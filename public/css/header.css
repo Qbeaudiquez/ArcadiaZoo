@@ -4,18 +4,6 @@
     --fade-in-delay:1.4s
 }
 
-
-
-.goup{
-    position: fixed;
-    z-index: 10;
-    bottom: 5px;
-    right: 5px;
-    width: 40px;
-
-
-}
-
 .header{
     display: flex;
     justify-content:space-between;
@@ -45,17 +33,6 @@
 .header .navbar .link{
     margin:0 20px;
     color: var(--first-color);
-}
-
-.scrollbar{
-    width: 0%;
-    height: 6px;
-    background-color: #879767;
-    position: fixed;
-    margin-top: 60px;
-    animation: comingtop var(--fade-in-delay) ease-out ;
-    z-index: 3;
-    transition: width .2s ease-in-out;
 }
 
 .hero{
@@ -188,3 +165,5 @@
 
 
   }
+
+  
