@@ -24,6 +24,12 @@
 }
 
 .cardsContainer .cards img{
+    width: 320px;
+    height: 450px;
+    object-fit: cover;
+}
+
+.cardsContainer .cards img{
     border: 1px solid black;
     max-width: 320px;
 }
