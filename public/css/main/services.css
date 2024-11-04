@@ -1,0 +1,38 @@
+.servicesContainer{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    gap: 30px;
+    flex-wrap: wrap;
+    height: 100vh;
+}
+
+.servicesContainer .services{
+    z-index: 4;
+    position: relative;
+    transition: all .4s ease-in-out;
+}
+
+.servicesContainer .services h3{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    color: var(--first-color);
+    background-color: rgba(0, 0, 0, 0.229);
+    
+}
+
+.servicesContainer .services img{
+    border: 1px solid black;
+    max-width: 320px;
+}
+
+.servicesContainer:hover .services:not(:hover){
+    filter: blur(4px);
+}
+
+.servicesContainer .services:hover{
+    scale: 1.05;
+}
+
