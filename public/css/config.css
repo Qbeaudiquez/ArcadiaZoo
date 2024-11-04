@@ -40,14 +40,14 @@
 /* Initialize new scrollbar */
 
 #scrollbar{
-    width: 100%;
+    width: 0%;
     height: 6px;
     background-color: #879767;
     position: fixed;
     left: 0;
     top : 0;
     animation: comingtop var(--fade-in-delay) ease-out ;
-    z-index: 3;
+    z-index: 10;
     transition: width .2s ease-in-out;
 }
 
