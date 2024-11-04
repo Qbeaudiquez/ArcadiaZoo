@@ -15,5 +15,5 @@ function loadHTML(elementId, filePath) {
 }
 
 // Chargez le header et le footer
-loadHTML('header', 'header.html')
-loadHTML('footer', 'footer.html')
+loadHTML('header', '/public/html/header-footer/header.html')
+loadHTML('footer', '/public/html/header-footer/footer.html')
