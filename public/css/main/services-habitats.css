@@ -1,4 +1,4 @@
-.servicesContainer{
+.cardsContainer{
     display: flex;
     align-items: center;
     justify-content: space-evenly;
@@ -7,13 +7,13 @@
     height: 100vh;
 }
 
-.servicesContainer .services{
+.cardsContainer .cards{
     z-index: 4;
     position: relative;
     transition: all .4s ease-in-out;
 }
 
-.servicesContainer .services h3{
+.cardsContainer .cards h3{
     position: absolute;
     top: 50%;
     left: 50%;
@@ -23,16 +23,16 @@
     
 }
 
-.servicesContainer .services img{
+.cardsContainer .cards img{
     border: 1px solid black;
     max-width: 320px;
 }
 
-.servicesContainer:hover .services:not(:hover){
+.cardsContainer:hover .cards:not(:hover){
     filter: blur(4px);
 }
 
-.servicesContainer .services:hover{
+.cardsContainer .cards:hover{
     scale: 1.05;
 }
 
