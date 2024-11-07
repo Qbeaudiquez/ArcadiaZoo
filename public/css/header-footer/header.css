@@ -1,0 +1,223 @@
+/* Variables */
+
+:root{
+    --fade-in-delay:1.4s
+}
+
+.header{
+    position: relative;
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    background-color: var(--second-color);
+    padding: 16px 30px 10px 30px;
+    position: fixed;
+    width: 100%;
+    animation: comingtop var(--fade-in-delay) ease-out ;
+    z-index: 10;
+}
+
+.header .burger-menu{
+    position: absolute;
+    display: none;
+}
+
+.header .small-logo{
+    width: 40px;
+}
+
+.header .navbar{
+    display: flex;
+    align-items: center;
+    z-index: 10;
+}
+
+.header .navbar .link{
+    all: unset;
+    margin:0 20px;
+    color: var(--first-color);
+    cursor: pointer;
+}
+
+
+
+.header .connexionContainer{
+    position: absolute;
+    background-color: var(--third-color);
+    top: 100%;
+    right: 0px;
+    padding: 20px;
+    opacity: 0;
+}
+
+.header .connexionContainer.active{
+    opacity: 1;
+    transition: opacity .4s ease;
+}
+
+.header .connexionContainer .formConnexion{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    align-items: center;
+}
+
+.header .connexionContainer .formConnexion input{
+    padding: 5px;
+    background-color: var(--first-color);
+    color: var(--second-color);
+}
+
+.header .connexionContainer .formConnexion .log-inBtn{
+    cursor: pointer;
+    padding: 5px;
+    background-color: var(--first-color);
+    border: none;
+    transition: background-color .2s ease;
+    margin-top: 20px;
+}
+
+.header .connexionContainer .formConnexion .log-inBtn:hover{
+    background-color: var(--first-color-opacity);
+}
+
+.hero{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 120px 0 50px 0;
+    height: 100vh;
+    justify-content:space-between ;
+    color: var(--second-color);
+}
+
+
+.hero .hero-container{
+    max-width: 400px;
+    display: flex;
+    flex-direction: column ;
+    align-items: center;
+    gap: 15px;
+    animation: fade-in var(--fade-in-delay) ease-out alternate;
+}
+
+.hero .hero-container .logo{
+    width: 260px;
+}
+
+.hero .hero-container .logo img{
+    width: 100%;
+}
+
+.hero .hero-container h1{
+    font-size: 45px;
+}
+
+.hero .hero-container p{
+    text-align: center;
+    font-family: var(--second-typo);
+}
+
+.hero .cta{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    animation: comingdown var(--fade-in-delay) ease-out;
+}
+
+.hero .cta .arrow-down{
+    width: 60px;
+    animation: pulse 1.2s infinite ease-in-out alternate;
+    
+    transition: all .2s ease-in-out;
+}
+
+
+/* Hover effect */
+
+.header .navbar .link:hover{
+    color: #879767;
+    transition: all .1s ease-in-out;
+    
+}
+
+.header .login:hover{
+    scale: 1.15;
+}
+
+.hero .cta .arrow-down:hover{
+    scale: 1.2;
+}
+
+/* Keyframes */
+
+  @keyframes pulse {
+    from, to { transform: scale(1, 1); }
+    25% { transform: scale(0.9, 1.1); }
+    50% { transform: scale(1.1, 0.9); }
+    75% { transform: scale(0.95, 1.05); }
+  }
+
+  @keyframes comingtop {
+    from { transform:translateY(-200px); }
+  to { transform:translateY(0px); }
+    
+  }
+  
+  @keyframes comingdown {
+    from { transform:translateY(200px); }
+  to { transform:translateY(0px); }
+    
+  }
+
+
+  @keyframes fade-in {
+    from { scale: 0; }
+  to { scale: 1; }
+    
+  }
+
+  /* Media querry */
+
+  @media (max-width: 700px){
+    .header .burger-menu{
+        display: block;
+        top: 50%;
+        transform:translateY(-50%);
+        right: 20px;
+        z-index: 11;
+        cursor: pointer;
+    }
+
+    .header .navbar{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100vw;
+        height: 100vh;
+        position: absolute;
+        left: 100%;
+        top: 0;
+        background-color: rgba(255, 255, 255, 0.832);
+        gap: 30px;
+        transition: left .3s ease-in-out;
+        
+    }
+    .header .navbar .link{
+        color: var(--second-color);
+    }
+    .header .navbar .login{
+        background-color: var(--second-color);
+        padding: 8px;
+        border-radius: 8px;
+    }
+
+    .header .connexionContainer{
+        position: unset;
+        background-color: rgba(0, 0, 0, 0);
+  }
+    .header .connexionContainer .formConnexion {
+        color: rgb(255, 255, 255);
+    }
+
+}

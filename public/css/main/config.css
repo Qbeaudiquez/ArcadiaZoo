@@ -1,0 +1,85 @@
+/* Reset css */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style-type:none;
+    color: inherit;
+}
+/* Import typology */
+
+
+@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&family=Quicksand:wght@300..700&display=swap');
+
+/* Varible */
+
+:root{
+
+    /* Colors */
+
+    --first-color:rgb(216, 227, 199);
+    --first-color-opacity:rgb(216, 227, 199,0.5);
+    --second-color:rgb(72, 92, 53);
+    --third-color:rgb(135, 151, 103);
+
+    /* Typology */
+
+    --main-typo:"Quicksand", sans-serif;
+    --second-typo:"Indie Flower", serif;
+}
+
+/* Remove scrollbar */
+
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+/* Initialize new scrollbar */
+
+#scrollbar{
+    width: 0%;
+    height: 6px;
+    background-color: #879767;
+    position: fixed;
+    left: 0;
+    top : 0;
+    animation: comingtop var(--fade-in-delay) ease-out ;
+    z-index: 10;
+    transition: width .2s ease-in-out;
+}
+
+/* Color, typo and background Initialisation*/
+
+body {
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    background-color: var(--first-color);
+    font-family: var(--main-typo);
+}
+
+body::before {
+    content: ""; 
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url("/asset/background/texture_bg.jpg"); 
+    background-size:contain;
+    background-position: center;
+    opacity: 0.08;
+    z-index: -1;
+}
+
+/* Go up */
+
+.goup{
+    position: fixed;
+    z-index: 10;
+    bottom: 5px;
+    right: 5px;
+    width: 40px;
+}
