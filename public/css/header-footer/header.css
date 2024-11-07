@@ -5,6 +5,7 @@
 }
 
 .header{
+    position: relative;
     display: flex;
     justify-content:space-between;
     align-items: center;
@@ -28,11 +29,56 @@
 .header .navbar{
     display: flex;
     align-items: center;
+    z-index: 10;
 }
 
 .header .navbar .link{
+    all: unset;
     margin:0 20px;
     color: var(--first-color);
+    cursor: pointer;
+}
+
+
+
+.header .connexionContainer{
+    position: absolute;
+    background-color: var(--third-color);
+    top: 66px;
+    right: 0;
+    padding: 20px;
+    opacity: 0;
+}
+
+.header .connexionContainer.active{
+    opacity: 1;
+    transition: opacity .4s ease;
+}
+
+.header .connexionContainer .formConnexion{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    align-items: center;
+}
+
+.header .connexionContainer .formConnexion input{
+    padding: 5px;
+    background-color: var(--first-color);
+    color: var(--second-color);
+}
+
+.header .connexionContainer .formConnexion .log-inBtn{
+    cursor: pointer;
+    padding: 5px;
+    background-color: var(--first-color);
+    border: none;
+    transition: background-color .2s ease;
+    margin-top: 20px;
+}
+
+.header .connexionContainer .formConnexion .log-inBtn:hover{
+    background-color: var(--first-color-opacity);
 }
 
 .hero{

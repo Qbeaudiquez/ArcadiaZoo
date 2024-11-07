@@ -1,3 +1,5 @@
+// Load HTML
+
 function loadHTML(elementId, filePath) {
     fetch(filePath)
         .then(response => {
@@ -14,6 +16,18 @@ function loadHTML(elementId, filePath) {
         });
 }
 
-// Chargez le header et le footer
 loadHTML('header', '/public/html/header-footer/header.html')
 loadHTML('footer', '/public/html/header-footer/footer.html')
+
+//Load JS
+
+function loadScript(adress){
+    const script = document.createElement("script")
+    script.src = adress
+    script.defer = true
+    document.body.appendChild(script)
+    
+}
+
+loadScript("/public/js/main/scrollbar.js")
+loadScript("/public/js/main/connexion.js")

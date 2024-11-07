@@ -1,3 +1,5 @@
+<script src="/public/js/main/connexion.js"></script>
+
 <link rel="stylesheet" href="/public/css/header-footer/header.css">
 
 <!-- Initialization go up -->
@@ -6,6 +8,18 @@
 <!-- Header -->
 
 <header class="header">
+
+    <div class="connexionContainer">
+        <form class="formConnexion">
+            <label for="nameConnexion" ></label>
+            <input type="text" id="nameConnexion" placeholder="Pseudo">
+
+            <label for="passwordConnexion"></label>
+            <input type="password" id="passwordConnexion" placeholder="Mot de passe">
+
+            <input type="button" value="Connexion" class="log-inBtn">
+        </form>
+    </div>
 
     <div class="burger-menu"><img src="/asset/icon/menu.svg" alt="Menu principale"></div>
 
@@ -16,12 +30,10 @@
             <li><a id="home" href="../main/index.html" class="link">Accueil</a></li>
             <li><a id="services" href="../main/services.html" class="link">Services</a></li>
             <li><a id="habits" href="../main/habitats.html" class="link">Habitats</a></li>
-            <li><a id="rewiews" href="../main/reviews.html" class="link">Avis</a></li>
             <li><a id="contact" href="../main/contact.html" class="link">Contact</a></li>
-            <li><a href="" class="link"><img src="/asset/icon/log-in.svg" alt="logo connection" class="login"></a></li>
+            <li> <button class="connexionBtn link"><img src="/asset/icon/log-in.svg" alt="logo connection" class="login"></button></li>
         </ul>
-    </nav>
-            
+    </nav>            
 </header>
 
 <section  id="scrollup" class="hero">
