@@ -31,3 +31,4 @@ function loadScript(adress){
 
 loadScript("/public/js/main/scrollbar.js")
 loadScript("/public/js/main/connexion.js")
+loadScript("/public/js/main/burgermenu.js")

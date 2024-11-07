@@ -6,6 +6,7 @@
 }
 
 .cardsContainer{
+    
     display: flex;
     align-items: center;
     justify-content: space-evenly;
@@ -47,3 +48,8 @@
     scale: 1.05;
 }
 
+@media (max-width: 700px) {
+    #scrolldown{
+        height:auto;
+    }
+}

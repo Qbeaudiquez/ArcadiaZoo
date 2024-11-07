@@ -44,8 +44,8 @@
 .header .connexionContainer{
     position: absolute;
     background-color: var(--third-color);
-    top: 66px;
-    right: 0;
+    top: 100%;
+    right: 0px;
     padding: 20px;
     opacity: 0;
 }
@@ -185,6 +185,8 @@
         top: 50%;
         transform:translateY(-50%);
         right: 20px;
+        z-index: 11;
+        cursor: pointer;
     }
 
     .header .navbar{
@@ -198,6 +200,7 @@
         top: 0;
         background-color: rgba(255, 255, 255, 0.832);
         gap: 30px;
+        transition: left .3s ease-in-out;
         
     }
     .header .navbar .link{
@@ -209,7 +212,12 @@
         border-radius: 8px;
     }
 
-
+    .header .connexionContainer{
+        position: unset;
+        background-color: rgba(0, 0, 0, 0);
   }
+    .header .connexionContainer .formConnexion {
+        color: rgb(255, 255, 255);
+    }
 
-  
+}
