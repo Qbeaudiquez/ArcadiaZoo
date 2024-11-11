@@ -5,30 +5,47 @@ main{
 .cardsContainer{
     display: flex;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: center;
     gap: 30px;
     flex-wrap: wrap;
 }
 
 .cardsContainer .cards{
+    display: flex;
+    flex-direction: row;
     z-index: 4;
     position: relative;
-    transition: all .4s ease-in-out;
+    transition: all .2s ease-in-out;
+    align-items: center;
+    justify-content: center;
 }
 
-.cardsContainer .cards h3{
+.cardsContainer .cards h3, .cardsContainer .cards p{
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
     color: var(--first-color);
-    background-color: rgba(0, 0, 0, 0.229);
+    background-color: rgba(0, 0, 0, 0.454);
     
 }
 
+.cardsContainer .cards h3{
+    top: 5%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.cardsContainer .cards p{
+    bottom: 5%;
+    max-width: 320px;
+    opacity: 0;
+    transition: all .2s ease-in-out;
+    padding: 5px 10px;
+    text-align: center;
+
+}
 .cardsContainer .cards img{
     border: 1px solid black;
     max-width: 320px;
+    object-fit: fill;
 }
 
 .cardsContainer:hover .cards:not(:hover){
@@ -39,3 +56,6 @@ main{
     scale: 1.05;
 }
 
+.cardsContainer .cards:hover p{
+    opacity: 1;
+}
