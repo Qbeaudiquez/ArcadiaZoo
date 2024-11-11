@@ -1,12 +1,12 @@
 // Load HTML
 
 function loadHTML(elementId, filePath) {
-    fetch(filePath)
+    return fetch(filePath)
         .then(response => {
             if (!response.ok) {
                 throw new Error('Erreur de chargement du fichier : ' + response.status)
             }
-            return response.text();
+            return response.text()
         })
         .then(data => {
             document.getElementById(elementId).innerHTML = data
@@ -16,19 +16,27 @@ function loadHTML(elementId, filePath) {
         });
 }
 
-loadHTML('header', '/public/html/header-footer/header.html')
-loadHTML('footer', '/public/html/header-footer/footer.html')
 
-//Load JS
+Promise.all([
+    loadHTML('header', '/public/html/header-footer/header.html'),
+    loadHTML('footer', '/public/html/header-footer/footer.html')
+]).then(() => {
 
-function loadScript(adress){
+    const event = new Event("dataLoaded")
+    window.dispatchEvent(event)
+});
+
+// Load JS
+
+function loadScript(adress) {
     const script = document.createElement("script")
     script.src = adress
     script.defer = true
     document.body.appendChild(script)
-    
 }
 
-loadScript("/public/js/main/scrollbar.js")
-loadScript("/public/js/main/connexion.js")
-loadScript("/public/js/main/burgermenu.js")
+window.addEventListener("dataLoaded", () => {
+    loadScript("/public/js/main/scrollbar.js")
+    loadScript("/public/js/main/connexion.js")
+    loadScript("/public/js/main/burgermenu.js")
+});
