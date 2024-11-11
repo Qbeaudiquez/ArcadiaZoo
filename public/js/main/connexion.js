@@ -6,5 +6,3 @@ const connexionBtn = document.querySelector(".connexionBtn")
 connexionBtn.addEventListener("click", () => {
     connexionContainer.classList.toggle("active")
 })
-
-console.log("teste")
