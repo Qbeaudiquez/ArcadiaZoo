@@ -18,8 +18,8 @@ function loadHTML(elementId, filePath) {
 
 
 Promise.all([
-    loadHTML('header', '/public/html/header-footer/header.html'),
-    loadHTML('footer', '/public/html/header-footer/footer.html')
+    loadHTML('header', '/zoo-arcadia/public/html/header-footer/header.html'),
+    loadHTML('footer', '/zoo-arcadia/public/html/header-footer/footer.html')
 ]).then(() => {
 
     const event = new Event("dataLoaded")
@@ -36,7 +36,7 @@ function loadScript(adress) {
 }
 
 window.addEventListener("dataLoaded", () => {
-    loadScript("/public/js/main/scrollbar.js")
-    loadScript("/public/js/main/connexion.js")
-    loadScript("/public/js/main/burgermenu.js")
+    loadScript("/zoo-arcadia/public/js/main/scrollbar.js")
+    loadScript("/zoo-arcadia/public/js/main/connexion.js")
+    loadScript("/zoo-arcadia/public/js/main/burgermenu.js")
 });

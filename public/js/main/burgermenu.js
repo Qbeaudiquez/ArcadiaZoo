@@ -7,7 +7,7 @@ burgerMenu.addEventListener("click", () => {
     if(!isOpen){
         navBar.style.left = "0%"
         isOpen = true
-        imgBurgerMenu.src = "/asset/icon/x.svg"
+        imgBurgerMenu.src = "/zoo-arcadia/asset/icon/x.svg"
     }else{
         navBar.style.left = "100%"
         isOpen = false

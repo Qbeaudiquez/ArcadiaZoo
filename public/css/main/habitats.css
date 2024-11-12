@@ -59,23 +59,23 @@
 }
 
 .cardsContainer .cardContainer.autralian{
-    background-image: url("/asset/img_habitats/desertaustralienvertical.jpeg");
+    background-image: url("/zoo-arcadia/asset/img_habitats/desertaustralienvertical.jpeg");
 }
 
 .cardsContainer .cardContainer.frenchForest{
-    background-image: url("/asset/img_habitats/foretfrancaisevertical.jpeg");
+    background-image: url("/zoo-arcadia/asset/img_habitats/foretfrancaisevertical.jpeg");
 }
 
 .cardsContainer .cardContainer.nordicForest{
-    background-image: url("/asset/img_habitats/foretnordiquevertical.jpeg");
+    background-image: url("/zoo-arcadia/asset/img_habitats/foretnordiquevertical.jpeg");
 }
 
 .cardsContainer .cardContainer.montagne{
-    background-image: url("/asset/img_habitats/montagnevertical.jpeg");
+    background-image: url("/zoo-arcadia/asset/img_habitats/montagnevertical.jpeg");
 }
 
 .cardsContainer .cardContainer.savana{
-    background-image: url("/asset/img_habitats/savanevertical.jpeg");
+    background-image: url("/zoo-arcadia/asset/img_habitats/savanevertical.jpeg");
 }
 
 .cardsContainer .animalsContainer{
@@ -108,63 +108,63 @@
 }
 
 .cardsContainer .animalsContainer .cardAnimal .animal.eigle{
-    background-image: url("/asset/img_animals/autralia/eigle.png");
+    background-image: url("/zoo-arcadia/asset/img_animals/autralia/eigle.png");
 }
 
 .cardsContainer .animalsContainer .cardAnimal .animal.kangaroo{
-    background-image: url("/asset/img_animals/autralia/kangaroo.png");
+    background-image: url("/zoo-arcadia/asset/img_animals/autralia/kangaroo.png");
 }
 
 .cardsContainer .animalsContainer .cardAnimal .animal.quokka{
-    background-image: url("/asset/img_animals/autralia/quokka.png");
+    background-image: url("/zoo-arcadia/asset/img_animals/autralia/quokka.png");
 }
 
 .cardsContainer .animalsContainer .cardAnimal .animal.sanglier{
-    background-image: url("/asset/img_animals/frenchforest/sanglier.png");
+    background-image: url("/zoo-arcadia/asset/img_animals/frenchforest/sanglier.png");
 }
 
 .cardsContainer .animalsContainer .cardAnimal .animal.cerf{
-    background-image: url("/asset/img_animals/frenchforest/cerf.png");
+    background-image: url("/zoo-arcadia/asset/img_animals/frenchforest/cerf.png");
 }
 
 .cardsContainer .animalsContainer .cardAnimal .animal.renard{
-    background-image: url("/asset/img_animals/frenchforest/renard.png");
+    background-image: url("/zoo-arcadia/asset/img_animals/frenchforest/renard.png");
 }
 
 .cardsContainer .animalsContainer .cardAnimal .animal.elan{
-    background-image: url("/asset/img_animals/nordicforest/elan.png");
+    background-image: url("/zoo-arcadia/asset/img_animals/nordicforest/elan.png");
 }
 
 .cardsContainer .animalsContainer .cardAnimal .animal.lynx{
-    background-image: url("/asset/img_animals/nordicforest/lynx.png");
+    background-image: url("/zoo-arcadia/asset/img_animals/nordicforest/lynx.png");
 }
 
 .cardsContainer .animalsContainer .cardAnimal .animal.renardPolaire{
-    background-image: url("/asset/img_animals/nordicforest/renardPolaire.png");
+    background-image: url("/zoo-arcadia/asset/img_animals/nordicforest/renardPolaire.png");
 }
 
 .cardsContainer .animalsContainer .cardAnimal .animal.chamois{
-    background-image: url("/asset/img_animals/montagne/chamois.png");
+    background-image: url("/zoo-arcadia/asset/img_animals/montagne/chamois.png");
 }
 
 .cardsContainer .animalsContainer .cardAnimal .animal.mouflon{
-    background-image: url("/asset/img_animals/montagne/mouflon.png");
+    background-image: url("/zoo-arcadia/asset/img_animals/montagne/mouflon.png");
 }
 
 .cardsContainer .animalsContainer .cardAnimal .animal.gypaete{
-    background-image: url("/asset/img_animals/montagne/gypaete.png");
+    background-image: url("/zoo-arcadia/asset/img_animals/montagne/gypaete.png");
 }
 
 .cardsContainer .animalsContainer .cardAnimal .animal.lion{
-    background-image: url("/asset/img_animals/savane/lion.png");
+    background-image: url("/zoo-arcadia/asset/img_animals/savane/lion.png");
 }
 
 .cardsContainer .animalsContainer .cardAnimal .animal.elephant{
-    background-image: url("/asset/img_animals/savane/elephant.png");
+    background-image: url("/zoo-arcadia/asset/img_animals/savane/elephant.png");
 }
 
 .cardsContainer .animalsContainer .cardAnimal .animal.girafe{
-    background-image: url("/asset/img_animals/savane/girafe.png");
+    background-image: url("/zoo-arcadia/asset/img_animals/savane/girafe.png");
 }
 
 .cardsContainer .animalsContainer .cardAnimal .animal h4 ,.cardsContainer .animalsContainer .cardAnimal .animal p{
