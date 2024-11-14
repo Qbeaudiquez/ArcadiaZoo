@@ -5,12 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Zoo Arcadia - Avis</title>
     <link rel="stylesheet" href="/zoo-arcadia/public/css/main/config.css">
-    <script src="/zoo-arcadia/public/js/main/loader.js" defer></script>
     <script src="/zoo-arcadia/public/js/main/scrollbar.js" defer></script>
 </head>
 <body>
-    <div id="header"></div>
+    <?php require_once(__DIR__ . '/../header-footer/header.html')?>
     <main></main>
-    <div id="footer"></div>
+    <?php require_once(__DIR__ . '/../header-footer/footer.html')?>
 </body>
 </html>

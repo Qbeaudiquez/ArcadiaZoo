@@ -9,7 +9,7 @@
     <script src="/zoo-arcadia/public/js/main/loader.js" defer></script>
 </head>
 <body>
-    <div id="header"></div>
+    <?php require_once(__DIR__ . '/../header-footer/header.html')?>
     <main id="scrolldown">
         <div class="cardIndivContainer">
             <div class="indivImg"><img src="/zoo-arcadia/asset/img_service/restaurant.png" alt="photo restaurant"></div>
@@ -20,6 +20,6 @@
             </div>
         </div>
     </main>
-    <div id="footer"></div>
+    <?php require_once(__DIR__ . '/../header-footer/footer.html')?>
 </body>
 </html>

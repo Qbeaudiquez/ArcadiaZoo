@@ -6,10 +6,11 @@
     <title>Zoo Arcadia - Contact</title>
     <link rel="stylesheet" href="/zoo-arcadia/public/css/main/config.css">
     <link rel="stylesheet" href="/zoo-arcadia/public/css/main/contact.css">
-    <script src="/zoo-arcadia/public/js/main/loader.js" defer></script>
 </head>
 <body>
-    <div id="header"></div>
+
+    <?php require_once(__DIR__ . '/../header-footer/header.html')?>
+
     <main id="scrolldown" class="main">
         <form class="formContact">
 
@@ -64,6 +65,9 @@
             </div>
         </section>
     </main>
-    <div id="footer"></div>
+
+    <?php require_once(__DIR__ . '/../header-footer/footer.html')?>
+
+
 </body>
 </html>

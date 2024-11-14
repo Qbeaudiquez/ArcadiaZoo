@@ -6,11 +6,10 @@
     <title>Zoo Arcadia -Accueil</title>
     <link rel="stylesheet" href="/zoo-arcadia/public/css/main/config.css">
     <link rel="stylesheet" href="/zoo-arcadia/public/css/main/index.css">
-    <script src="/zoo-arcadia/public/js/main/loader.js" defer></script>
     <script src="/zoo-arcadia/public/js/main/carousel.js" defer></script>
 </head>
 <body>
-    <div id="header"></div>
+<?php require_once(__DIR__ . "/../header-footer/header.html"); ?>
     <main id="scrolldown" class="main">
 
             <!-- First carousel -->
@@ -26,11 +25,11 @@
 
                 <button class="btn after"><img src="/zoo-arcadia/asset/icon/arrow-right.svg" alt="Bouton suivant"></button>
 
-                <a href="../services/restaurant.html"><img src="/zoo-arcadia/asset/img_service/restaurant.png" alt="Photo de notre restaurant" class="carousel-image active" data-title="Notre restaurant"></a>
+                <a href="../services/restaurant.php"><img src="/zoo-arcadia/asset/img_service/restaurant.png" alt="Photo de notre restaurant" class="carousel-image active" data-title="Notre restaurant"></a>
 
-                <a href="../services/train.html"><img src="/zoo-arcadia/asset/img_service/petit-train.png" alt="Photo du petit train" class="carousel-image" data-title="Tour du parc en un petit train"></a>
+                <a href="../services/train.php"><img src="/zoo-arcadia/asset/img_service/petit-train.png" alt="Photo du petit train" class="carousel-image" data-title="Tour du parc en un petit train"></a>
 
-                <a href="../services/guide.html"><img src="/zoo-arcadia/asset/img_service/guide-touristique.png" alt="Photo du guide touristique" class="carousel-image" data-title="Faite une visite guidé avec notre équipe de soigneur"></a>
+                <a href="../services/guide.php"><img src="/zoo-arcadia/asset/img_service/guide-touristique.png" alt="Photo du guide touristique" class="carousel-image" data-title="Faite une visite guidé avec notre équipe de soigneur"></a>
 
                 <div class="title-img"></div>
                   
@@ -47,15 +46,15 @@
 
                 <button class="btn after"><img src="/zoo-arcadia/asset/icon/arrow-right.svg" alt="Bouton suivant"></button>
 
-                <a href="/zoo-arcadia/public/html/main/habitats.html"><img src="/zoo-arcadia/asset/img_habitats/desertaustralienvertical.jpeg" alt="Photo du desert australien" class="carousel-image active" data-title="Desert Australien"></a>
+                <a href="/zoo-arcadia/public/html/main/habitats.php"><img src="/zoo-arcadia/asset/img_habitats/desertaustralienvertical.jpeg" alt="Photo du desert australien" class="carousel-image active" data-title="Desert Australien"></a>
 
-                <a href="/zoo-arcadia/public/html/main/habitats.html"><img src="/zoo-arcadia/asset/img_habitats/foretfrancaisevertical.jpeg" alt="Photo de la fôret francaise" class="carousel-image" data-title="Fôret Française"></a>
+                <a href="/zoo-arcadia/public/html/main/habitats.php"><img src="/zoo-arcadia/asset/img_habitats/foretfrancaisevertical.jpeg" alt="Photo de la fôret francaise" class="carousel-image" data-title="Fôret Française"></a>
 
-                <a href="/zoo-arcadia/public/html/main/habitats.html"><img src="/zoo-arcadia/asset/img_habitats/foretnordiquevertical.jpeg" alt="Photo de la fôret nordique" class="carousel-image" data-title="Fôret Nordique"></a>
+                <a href="/zoo-arcadia/public/html/main/habitats.php"><img src="/zoo-arcadia/asset/img_habitats/foretnordiquevertical.jpeg" alt="Photo de la fôret nordique" class="carousel-image" data-title="Fôret Nordique"></a>
 
-                <a href="/zoo-arcadia/public/html/main/habitats.html"><img src="/zoo-arcadia/asset/img_habitats/montagnevertical.jpeg" alt="Photo de la montagne" class="carousel-image" data-title="Montagne"></a>
+                <a href="/zoo-arcadia/public/html/main/habitats.php"><img src="/zoo-arcadia/asset/img_habitats/montagnevertical.jpeg" alt="Photo de la montagne" class="carousel-image" data-title="Montagne"></a>
 
-                <a href="/zoo-arcadia/public/html/main/habitats.html"><img src="/zoo-arcadia/asset/img_habitats/savanevertical.jpeg" alt="Photo de la savane" class="carousel-image" data-title="Savane "></a>
+                <a href="/zoo-arcadia/public/html/main/habitats.php"><img src="/zoo-arcadia/asset/img_habitats/savanevertical.jpeg" alt="Photo de la savane" class="carousel-image" data-title="Savane "></a>
 
                 <div class="title-img"></div>
                   

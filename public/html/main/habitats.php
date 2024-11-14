@@ -6,11 +6,10 @@
     <title>Zoo Arcadia - Services</title>
     <link rel="stylesheet" href="/zoo-arcadia/public/css/main/config.css">
     <link rel="stylesheet" href="/zoo-arcadia/public/css/main/habitats.css">
-    <script src="/zoo-arcadia/public/js/main/loader.js" defer></script>
     <script src="/zoo-arcadia/public/js/habitats/card.js" defer></script>
 </head>
 <body>
-    <div id="header"></div>
+<?php require_once(__DIR__ . '/../header-footer/header.html')?>
 
     <main id="scrolldown" class="main">
         <div class="cardsContainer">
@@ -453,6 +452,6 @@
         </div>
     </main>
 
-    <div id="footer"></div>
+    <?php require_once(__DIR__ . '/../header-footer/footer.html')?>
 </body>
 </html>
