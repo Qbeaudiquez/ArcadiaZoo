@@ -10,10 +10,10 @@ if(isset($postData["userName"])
                 $_SESSION['LOGGED_USER'] = $user["username"];
                 foreach($roles as $role){
                     if($role["role_id"] === $user["role_id"]){
-                        $loggedRole = $role["label"];
+                        $_SESSION['LOGGED_ROLE'] = $role["label"];
                     }
                 }
-                    $_SESSION['LOGGED_MESSAGE'] = "{$user['firstname']} {$user['name']}" . '</br>' . $loggedRole;
+                    $_SESSION['LOGGED_MESSAGE'] = "{$user['firstname']} {$user['name']}";
                     break;
                 }
     }
@@ -47,7 +47,7 @@ if(isset($postData["userName"])
 <?php else : ?>
 
     <li>
-        <p class="username" style="color: var(--first-color); text-align: center;" >Bienvenue <?php echo $_SESSION['LOGGED_MESSAGE']?></p>
+        <p class="username" style="color: var(--first-color); text-align: center;" >Bienvenue <?php echo htmlspecialchars($_SESSION['LOGGED_MESSAGE'])?> <br> <?php echo htmlspecialchars($_SESSION['LOGGED_ROLE'])?></p>
     </li>
     <li>
         <button class="deconnexionBtn link"><a href="/zoo-arcadia/src/logout.php"><img src="/zoo-arcadia/asset/icon/log-out.svg" alt="logo deconnection" class="login"></a></button>
