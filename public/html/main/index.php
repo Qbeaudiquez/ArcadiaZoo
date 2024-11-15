@@ -9,7 +9,7 @@
     <script src="/zoo-arcadia/public/js/main/carousel.js" defer></script>
 </head>
 <body>
-<?php require_once(__DIR__ . "/../header-footer/header.html"); ?>
+<?php require_once(__DIR__ . "/../header-footer/header.php"); ?>
     <main id="scrolldown" class="main">
 
             <!-- First carousel -->
@@ -126,6 +126,6 @@
               </form>
         </div>
     </main>
-    <div id="footer"></div>
+    <?php require_once(__DIR__ . "/../header-footer/footer.php"); ?>
 </body>
 </html>

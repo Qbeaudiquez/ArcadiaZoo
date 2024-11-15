@@ -1,3 +1,10 @@
+<!-- Start session -->
+<?php session_start();?>
+
+<!-- Initialization script php -->
+<?php require_once(__DIR__ . "/../../../sql/users.php"); ?>
+
+
 <!-- Initialization script js -->
 
 <script src="/zoo-arcadia/public/js/header/connexion.js" defer></script>
@@ -15,7 +22,6 @@
 <!-- Header -->
 
 <header class="header">
-
     
 
     <div class="burger-menu"><img class="imgBurgerMenu" src="/zoo-arcadia/asset/icon/menu.svg" alt="Menu principale"></div>
@@ -28,17 +34,7 @@
             <li><a id="services" href="../main/services.php" class="link">Services</a></li>
             <li><a id="habits" href="../main/habitats.php" class="link">Habitats</a></li>
             <li><a id="contact" href="../main/contact.php" class="link">Contact</a></li>
-            <li> <button class="connexionBtn link"><img src="/zoo-arcadia/asset/icon/log-in.svg" alt="logo connection" class="login"></button></li>
-            <li class="connexionContainer">
-                <form class="formConnexion">
-                    <label for="nameConnexion" ></label>
-                    <input type="text" id="nameConnexion" placeholder="Pseudo">
-
-                    <label for="passwordConnexion"></label>
-                    <input type="password" id="passwordConnexion" placeholder="Mot de passe">
-
-                    <input type="button" value="Connexion" class="log-inBtn">
-                </form></li>
+            <?php require_once(__DIR__ . "/../../../src/connexion.php"); ?>
             
         </ul>
     </nav>            

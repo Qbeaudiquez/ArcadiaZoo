@@ -8,8 +8,8 @@
     <script src="/zoo-arcadia/public/js/main/scrollbar.js" defer></script>
 </head>
 <body>
-    <?php require_once(__DIR__ . '/../header-footer/header.html')?>
+    <?php require_once(__DIR__ . '/../header-footer/header.php')?>
     <main></main>
-    <?php require_once(__DIR__ . '/../header-footer/footer.html')?>
+    <?php require_once(__DIR__ . '/../header-footer/footer.php')?>
 </body>
 </html>

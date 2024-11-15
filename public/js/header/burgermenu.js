@@ -11,7 +11,7 @@ burgerMenu.addEventListener("click", () => {
     }else{
         navBar.style.left = "100%"
         isOpen = false
-        imgBurgerMenu.src = "/asset/icon/menu.svg"
+        imgBurgerMenu.src = "/zoo-arcadia/asset/icon/menu.svg"
         connexionContainer.classList.remove("active")
     }
     

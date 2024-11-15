@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="/zoo-arcadia/public/css/main/services.css">
 </head>
 <body>
-    <?php require_once(__DIR__ . '/../header-footer/header.html')?>
+    <?php require_once(__DIR__ . '/../header-footer/header.php')?>
 
     <main id="scrolldown" class=".main">
         <div class="cardsContainer">
@@ -27,6 +27,6 @@
         </div>        
     </main>
 
-    <?php require_once(__DIR__ . '/../header-footer/footer.html')?>
+    <?php require_once(__DIR__ . '/../header-footer/footer.php')?>
 </body>
 </html>
