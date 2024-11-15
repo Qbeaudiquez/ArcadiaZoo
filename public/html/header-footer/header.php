@@ -2,7 +2,9 @@
 <?php session_start();?>
 
 <!-- Initialization script php -->
-<?php require_once(__DIR__ . "/../../../sql/users.php"); ?>
+<?php require_once(__DIR__ . "../../../../config/mysql.php"); ?>
+<?php require_once(__DIR__ . "../../../../src/databaselogin.php"); ?>
+<?php require_once(__DIR__ . "../../../../src/variables.php"); ?>
 
 
 <!-- Initialization script js -->
