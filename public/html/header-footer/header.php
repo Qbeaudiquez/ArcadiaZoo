@@ -2,8 +2,6 @@
 <?php session_start();?>
 
 <!-- Initialization script php -->
-<?php require_once(__DIR__ . "../../../../config/mysql.php"); ?>
-<?php require_once(__DIR__ . "../../../../src/databaselogin.php"); ?>
 <?php require_once(__DIR__ . "../../../../src/variables.php"); ?>
 
 
@@ -14,7 +12,7 @@
 <script src="/zoo-arcadia/public/js/header/burgermenu.js" defer></script>
 
 <!-- Initialization header css -->
-
+<link rel="stylesheet" href="/zoo-arcadia/public/css/main/config.css">
 <link rel="stylesheet" href="/zoo-arcadia/public/css/header-footer/header.css">
 
 <!-- Initialization go up -->
@@ -36,7 +34,7 @@
             <li><a id="services" href="../main/services.php" class="link">Services</a></li>
             <li><a id="habits" href="../main/habitats.php" class="link">Habitats</a></li>
             <li><a id="contact" href="../main/contact.php" class="link">Contact</a></li>
-            <?php require_once(__DIR__ . "/../../../src/connexion.php"); ?>
+            <?php require_once(__DIR__ . "/../../../src/login.php"); ?>
             
         </ul>
     </nav>            

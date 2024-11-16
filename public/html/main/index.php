@@ -4,9 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Zoo Arcadia -Accueil</title>
-    <link rel="stylesheet" href="/zoo-arcadia/public/css/main/config.css">
     <link rel="stylesheet" href="/zoo-arcadia/public/css/main/index.css">
     <script src="/zoo-arcadia/public/js/main/carousel.js" defer></script>
+    <script src="/zoo-arcadia/public/js/main/ratingStar.js"></script>
 </head>
 <body>
 <?php require_once(__DIR__ . "/../header-footer/header.php"); ?>
@@ -66,56 +66,48 @@
             </div>
             
         </div>
-        <div class="review">
+        <div class="review" id="formAnchor">
 
             <div class="randomReview">
-
-                <h3>Elodie</h3>
-                <p>Nous avons passez un magnifique moment d’évasion en famille. Le personnel est adorable et on sent que les animaux sont bien traité </br>
-                Je recommande </p>
-                <div>
-                    <img src="/zoo-arcadia/asset/icon/staryellow.svg" class="" alt="">
-                    <img src="/zoo-arcadia/asset/icon/staryellow.svg" class="" alt="">
-                    <img src="/zoo-arcadia/asset/icon/staryellow.svg" class="" alt="">
-                    <img src="/zoo-arcadia/asset/icon/staryellow.svg" class="" alt="">
-                    <img src="/zoo-arcadia/asset/icon/staryellow.svg" class="" alt="">
-                </div>
-                
+            <?php require_once(__DIR__ . "../../../../src/insertReview.php"); ?>
             </div>
-            <form class="reviewForm">
+
+            <?php require_once(__DIR__ . "../../../../src/review.php"); ?>
+
+            <form class="reviewForm" action="index.php#formAnchor" method="post">
                 <div class="reviewName">
-                  <label for="name">Entrer votre nom : </label>
-                  <input type="" name="name" id="name"  required />
+                  <label for="pseudo">Entrer votre nom : </label>
+                  <input type="text" name="pseudo" id="pseudo"  required />
                 </div>
                 <div class="reviewInput">
                   <label for="reviewInput">Donnez votre avis : </label>
-                  <textarea name="reviewInput" id="reviewInput" rows="10" required></textarea>
+                  <textarea name="reviewInput" id="reviewInput" rows="10" maxlength="150" required></textarea>
                 </div>
 
                 <div class="starReviewContainer">
                     
-                    <input type="radio" name="star" id="star1">
-                    <label for="star1" class="star">
+                    <input type="radio" name="star5" id="star5" >
+                    <label for="star5" class="star">
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#dac50a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-star"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
                     </label>
 
-                    <input type="radio" name="star" id="star2">
-                    <label for="star2" class="star">
+                    <input type="radio" name="star4" id="star4" >
+                    <label for="star4" class="star">
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#dac50a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-star"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
                     </label>
 
-                    <input type="radio" name="star" id="star3">
+                    <input type="radio" name="star3" id="star3" >
                     <label for="star3" class="star">
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#dac50a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-star"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
                     </label>
                     
-                    <input type="radio" name="star" id="star4">
-                    <label for="star4" class="star">
+                    <input type="radio" name="star2" id="star2">
+                    <label for="star2" class="star">
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#dac50a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-star"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
                     </label>
                     
-                    <input type="radio" name="star" id="star5">
-                    <label for="star5" class="star">
+                    <input type="radio" name="star1" id="star1">
+                    <label for="star1" class="star">
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#dac50a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-star"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
                     </label>
                 </div>
@@ -124,6 +116,7 @@
                   <input type="submit" value="Soumettre" />
                 </div>
               </form>
+              
         </div>
     </main>
     <?php require_once(__DIR__ . "/../header-footer/footer.php"); ?>

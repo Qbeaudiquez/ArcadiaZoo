@@ -1,0 +1,28 @@
+.dashbordReviewsContainer{
+    background-color: var(--second-color);
+    overflow-y: scroll;
+    overflow-x: hidden;
+    height: 240px;
+
+}
+
+.dashbordReviewsContainer .reviewsContainer{
+        display: flex;
+        align-items:center;
+        justify-content:start;
+}
+
+.dashbordReviewsContainer button{
+    background-color: var(--first-color);
+    border: none;
+    padding: 7px;
+    margin: 5px;
+    border-radius: 2px;
+    cursor: pointer;
+    color: var(--second-color);
+}
+
+.dashbordReviewsContainer button:hover{
+    background-color: var(--third-color);
+}
+

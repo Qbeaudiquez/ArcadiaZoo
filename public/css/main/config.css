@@ -33,11 +33,11 @@
 /* Remove scrollbar */
 
 
-::-webkit-scrollbar {
+html::-webkit-scrollbar {
     display: none;
-}
+} 
 
-/* Initialize new scrollbar */
+
 
 #scrollbar{
     width: 0%;
@@ -50,6 +50,22 @@
     z-index: 10;
     transition: width .2s ease-in-out;
 }
+
+/* Initialize new for scroll container */
+
+*::-webkit-scrollbar {
+    width: 12px;
+  }
+  
+  
+  *::-webkit-scrollbar-thumb {
+    border-radius: 4px;
+    background-color: var(--first-color)
+  }
+  
+  *::-webkit-scrollbar-thumb:hover {
+    background-color: var(--third-color);
+  }
 
 /* Color, typo and background Initialisation*/
 

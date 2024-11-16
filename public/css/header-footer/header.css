@@ -30,11 +30,11 @@
     display: flex;
     align-items: center;
     z-index: 10;
+    gap: 20px;
 }
 
 .header .navbar .link{
     all: unset;
-    margin:0 20px;
     color: var(--first-color);
     cursor: pointer;
 }
