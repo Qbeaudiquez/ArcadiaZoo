@@ -25,11 +25,9 @@
 
                 <button class="btn after"><img src="/zoo-arcadia/asset/icon/arrow-right.svg" alt="Bouton suivant"></button>
 
-                <a href="../services/restaurant.php"><img src="/zoo-arcadia/asset/img_service/restaurant.png" alt="Photo de notre restaurant" class="carousel-image active" data-title="Notre restaurant"></a>
-
-                <a href="../services/train.php"><img src="/zoo-arcadia/asset/img_service/petit-train.png" alt="Photo du petit train" class="carousel-image" data-title="Tour du parc en un petit train"></a>
-
-                <a href="../services/guide.php"><img src="/zoo-arcadia/asset/img_service/guide-touristique.png" alt="Photo du guide touristique" class="carousel-image" data-title="Faite une visite guidé avec notre équipe de soigneur"></a>
+                <?php foreach($services as $service):?>
+                    <a href="../main/services.php?service=service<?php echo $service['service_id']?>"><img src="../../../asset/img_service/service<?php echo $service['service_id']?>.png" alt="Photo service" class="carousel-image active" data-title="Notre restaurant"></a>
+                <?php endforeach ?>
 
                 <div class="title-img"></div>
                   

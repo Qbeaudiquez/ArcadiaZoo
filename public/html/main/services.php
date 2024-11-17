@@ -12,18 +12,7 @@
 
     <main id="scrolldown" class=".main">
         <div class="cardsContainer">
-            <div class="cards">
-                <h3>Guide touristique</h3>
-                <a href="../services/guide.html#scrolldown"><img src="/zoo-arcadia/asset/img_service/guide-touristique.png" alt="Photo guide touristique"></a>
-            </div>
-            <div class="cards">
-                <h3>Petit train</h3>
-                <a href="../services/train.html#scrolldown"><img src="/zoo-arcadia/asset/img_service/petit-train.png" alt="Photo petit train"></a>
-            </div>
-            <div class="cards">
-                <h3>Restaurant</h3>
-                <a href="../services/restaurant.html#scrolldown"><img src="/zoo-arcadia/asset/img_service/restaurant.png" alt="Photo restaurant"></a>
-            </div>
+            <?php require_once(__DIR__ . '/../../../src/insertServices.php')?>
         </div>        
     </main>
 

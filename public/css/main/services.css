@@ -1,24 +1,25 @@
+/* All services */
+
 #scrolldown{
-    height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
 .cardsContainer{
-    
+    width: 100%;
+    margin: 100px 0;
     display: flex;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: center;
     gap: 30px;
     flex-wrap: wrap;
-    width: 100%;
 }
 
 .cardsContainer .cards{
     z-index: 4;
     position: relative;
-    transition: all .3s ease-in-out;
+    transition: all .2s ease-in-out;
 }
 
 .cardsContainer .cards h3{
@@ -28,6 +29,7 @@
     transform: translate(-50%,-50%);
     color: var(--first-color);
     background-color: rgba(0, 0, 0, 0.229);
+    text-align: center;
     
     
 }
@@ -41,7 +43,8 @@
 }
 
 .cardsContainer:hover .cards:not(:hover){
-    filter: blur(2px);
+    filter: blur(1px);
+    scale: 0.95;
 }
 
 .cardsContainer .cards:hover{
@@ -51,5 +54,67 @@
 @media (max-width: 700px) {
     #scrolldown{
         height:auto;
+    }
+}
+
+/* One service */
+
+.cardIndivContainer{
+    width: 100%;
+    color: var(--first-color);
+}
+
+.cardIndivContainer > *{
+    text-align: center;
+}
+
+.cardIndivContainer .indivImg{
+    width: 100%;
+}
+
+.cardIndivContainer .indivImg img{
+    border: 2px solid var(--second-color);
+    object-fit: cover;
+    object-position: bottom;
+    height: 70vh;
+    width: 100%;
+}
+
+
+
+.cardIndivContainer .indivContent{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    transform: translateY(-200px);
+    z-index: 4;
+    padding: 30px;
+    background-color: rgba(0, 0, 0, 0.169);
+}
+.cardIndivContainer a{
+    width: auto;
+}
+.cardIndivContainer .indivCta{
+    transition: all 0.2s ease;
+    padding: 5px;
+    border-radius: 4px;
+}
+
+.cardIndivContainer:hover .indivContent{
+    z-index: 6;
+}
+
+.cardIndivContainer .indivCta:hover{
+    color: var(--second-color);
+    background-color: rgba(255, 255, 255, 0.557);
+
+}
+
+
+@media (max-width: 700px) {
+    .cardIndivContainer .indivContent{
+        transform: translateY(-250px);
+
     }
 }

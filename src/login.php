@@ -50,7 +50,7 @@ if (isset($postData["userName"]) && isset($postData["password"])) {
         </p>
     </li>
     <li class="link">
-        <a href="dashbord.php">Dashbord</a>
+        <a href="dashbord.php?service=dashbord">Dashbord</a>
     </li>
     <li>
         <button class="deconnexionBtn link">

@@ -1,5 +1,3 @@
-
-
 <?php foreach ($reviews as $review): ?>
 <?php if($review["isVisible"] === 1): ?>
 <div class="ratingContainer" style="

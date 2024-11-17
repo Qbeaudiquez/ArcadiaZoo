@@ -1,18 +1,26 @@
-.dashbordReviewsContainer{
+/* All */
+
+.main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    color: var(--second-color);
+    padding-top: 100px;
+}
+
+.dashbordContainer{
+    min-height: 240px;
+    color: var(--first-color);
     background-color: var(--second-color);
-    overflow-y: scroll;
-    overflow-x: hidden;
-    height: 240px;
-
+    margin-bottom: 30px;
+    width: 90%;
+    padding: 30px;
+    border-radius: 8px;
 }
 
-.dashbordReviewsContainer .reviewsContainer{
-        display: flex;
-        align-items:center;
-        justify-content:start;
-}
-
-.dashbordReviewsContainer button{
+.dashbordContainer button{
     background-color: var(--first-color);
     border: none;
     padding: 7px;
@@ -22,7 +30,95 @@
     color: var(--second-color);
 }
 
-.dashbordReviewsContainer button:hover{
+.dashbordContainer button:hover{
     background-color: var(--third-color);
+}
+
+
+/* Reviews */
+
+.dashbordContainer.reviews{
+    position: relative;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    
+}
+
+.dashbordContainer.reviews p{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+}
+
+.dashbordContainer.reviews .reviewsContainer{
+        display: flex;
+        align-items:center;
+        justify-content:start;
+}
+
+
+/* Services */
+
+.dashbordContainer.services{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    text-align: center;
+    height: auto;
+    flex-direction: column;
+}
+
+.dashbordContainer.services .serviceContainer{
+    display: flex;
+    align-items: start;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.dashbordContainer.services .cards{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.dashbordContainer.services .cards img{
+    max-width: 300px;
+}
+
+.dashbordContainer.services .cards p{
+    max-width: 300px;
+}
+
+.dashbordContainer.services .cards .editServiceForm{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    margin-top: 40px;
+}
+
+.dashbordContainer.services .cards .editServiceForm input, 
+.dashbordContainer.services .cards .editServiceForm textarea ,
+.dashbordContainer.services .makeContainer .makeServiceForm input, 
+.dashbordContainer.services .makeContainer .makeServiceForm textarea{
+    background-color: var(--first-color);
+    border: none;
+    color: var(--second-color);
+    padding: 5px;
+}
+
+.dashbordContainer.services .makeContainer .makeServiceForm{
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
 }
 

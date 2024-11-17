@@ -3,16 +3,14 @@
 
 <?php
 
+function fetchData(PDO $mysqlClient, string $querry) : array{
+    $statement = $mysqlClient->prepare($querry);
+    $statement->execute();
+    $table = $statement->fetchAll(PDO::FETCH_ASSOC);
+    return $table;
+}
 
-$usersStatement = $mysqlClient->prepare('SELECT * FROM user');
-$usersStatement->execute();
-$users = $usersStatement->fetchAll();
-
-
-$rolesStatement = $mysqlClient->prepare('SELECT * FROM role');
-$rolesStatement->execute();
-$roles = $rolesStatement->fetchAll();
-
-$reviewsStatement = $mysqlClient->prepare('SELECT * FROM review ORDER BY review_id DESC LIMIT 10');
-$reviewsStatement->execute();
-$reviews = $reviewsStatement->fetchAll();
+$users = fetchData($mysqlClient, 'SELECT * FROM user');
+$roles = fetchData($mysqlClient, 'SELECT * FROM role');
+$reviews = fetchData($mysqlClient, 'SELECT * FROM review ORDER BY review_id DESC LIMIT 10');
+$services = fetchData($mysqlClient, 'SELECT * FROM service');

@@ -9,8 +9,20 @@
 </head>
 <body>
 <?php require_once(__DIR__ . "/../header-footer/header.php"); ?>
-<main>
-    <?php if($_SESSION['LOGGED_ROLE_ID'] === 1 || $_SESSION['LOGGED_ROLE_ID'] === 3): ?>
+<?php if(isset($_SESSION['LOGGED_ROLE_ID'])) : ?>
+
+<?php 
+$adminAccess = $_SESSION['LOGGED_ROLE_ID'] === 1;
+$vetAcces = $_SESSION['LOGGED_ROLE_ID'] === 2;
+$employeAcces = $_SESSION['LOGGED_ROLE_ID'] === 3;
+?>
+<main id="scrolldown" class="main">
+    
+
+
+<!-- Reviews -->
+    <h3>Avis</h3>
+    <?php if($adminAccess || $employeAcces): ?>
         
         <?php
             
@@ -20,9 +32,12 @@
 
             
             if (empty($unmoderatedReviews)): ?>
-                    <p>Aucun avis en attente de modération.</p>
+            <div class='dashbordContainer reviews'>
+                <p>Aucun avis en attente de modération.</p>
+            </div>
+                    
         <?php else: ?>
-            <div class='dashbordReviewsContainer'>
+            <div class='dashbordContainer '>
                 <?php foreach ($unmoderatedReviews as $review): ?>
                     <div class="reviewsContainer">
                     <div style="
@@ -61,6 +76,45 @@
             </div>
         <?php endif; ?>
     <?php endif; ?>
+
+<!-- Services -->
+<h3>Services</h3>
+<div class='dashbordContainer services'>
+<?php if($adminAccess || $employeAcces):?>
+    <div class="serviceContainer">
+        <?php require_once(__DIR__ . "/../../../src/insertServices.php"); ?>
+    </div>
+
+
+<div class="makeContainer">
+    <h3>Créer un nouveau service</h3>
+    <form class="makeServiceForm" action="../../../src/moderateServices.php" method="post" enctype="multipart/form-data">
+
+        <label for="newServiceName">Nom du service</label>
+        <input type="text" name="newServiceName" id="newServiceName" required>
+
+        <label for="newServiceDesc">Description</label>
+        <textarea name="newServiceDesc" id="newServiceDesc" required></textarea>
+
+        <label for="newImage">Choisir une image :</label>
+        <input type="file" name="newImage" id="newImage" accept="image/*">
+        <button type="submit">Créer</button>
+    </form>
+</div>
+<?php endif;?>
+</div>
+<?php else :?>
+  <?=  "<div class='dashbordContainer reviews'><p>Veuillez vous connecter</p></div>"?>
+
+<?php endif;?>
+
+
+
+
+
+
+
+
 </main>
 <?php require_once(__DIR__ . "/../header-footer/footer.php"); ?>
 </body>
