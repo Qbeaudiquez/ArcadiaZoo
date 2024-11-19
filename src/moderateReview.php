@@ -18,6 +18,6 @@ if ($action === 'keep') {
     $stmt->execute([':id' => $id]);
 }
 
-header('Location: ' . $_SERVER['HTTP_REFERER']);
+header('Location: ' . $_SERVER['HTTP_REFERER'] . '#scrolldown');
 exit;
 ?>

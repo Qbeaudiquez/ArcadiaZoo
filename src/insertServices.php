@@ -18,7 +18,7 @@
             <?php if ($_GET['service'] === "dashbord") : ?>
                 <h3>Description : </h3>
                 <p><?php echo $service['description']; ?></p>
-                    <form class="editServiceForm" method="POST" action="../../../src/moderateServices.php" enctype="multipart/form-data">
+                    <form class="editServiceForm formulaire" method="POST" action="../../../src/moderateServices.php" enctype="multipart/form-data">
                         <input type="hidden" name="id" value="<?= htmlspecialchars($service['service_id']); ?>">
 
                         <label for="serviceName">Nom du service</label>

@@ -26,7 +26,7 @@
                 <button class="btn after"><img src="/zoo-arcadia/asset/icon/arrow-right.svg" alt="Bouton suivant"></button>
 
                 <?php foreach($services as $service):?>
-                    <a href="../main/services.php?service=service<?php echo $service['service_id']?>"><img src="../../../asset/img_service/service<?php echo $service['service_id']?>.png" alt="Photo service" class="carousel-image active" data-title="Notre restaurant"></a>
+                    <a href="../main/services.php?service=service<?= $service['service_id']?>#scrolldown"><img src="../../../asset/img_service/service<?= $service['service_id']?>.png" alt="Photo <?= $service['name']?>" class="carousel-image active" data-title="<?= $service['name']?>"></a>
                 <?php endforeach ?>
 
                 <div class="title-img"></div>
@@ -44,15 +44,9 @@
 
                 <button class="btn after"><img src="/zoo-arcadia/asset/icon/arrow-right.svg" alt="Bouton suivant"></button>
 
-                <a href="/zoo-arcadia/public/html/main/habitats.php"><img src="/zoo-arcadia/asset/img_habitats/desertaustralienvertical.jpeg" alt="Photo du desert australien" class="carousel-image active" data-title="Desert Australien"></a>
-
-                <a href="/zoo-arcadia/public/html/main/habitats.php"><img src="/zoo-arcadia/asset/img_habitats/foretfrancaisevertical.jpeg" alt="Photo de la fôret francaise" class="carousel-image" data-title="Fôret Française"></a>
-
-                <a href="/zoo-arcadia/public/html/main/habitats.php"><img src="/zoo-arcadia/asset/img_habitats/foretnordiquevertical.jpeg" alt="Photo de la fôret nordique" class="carousel-image" data-title="Fôret Nordique"></a>
-
-                <a href="/zoo-arcadia/public/html/main/habitats.php"><img src="/zoo-arcadia/asset/img_habitats/montagnevertical.jpeg" alt="Photo de la montagne" class="carousel-image" data-title="Montagne"></a>
-
-                <a href="/zoo-arcadia/public/html/main/habitats.php"><img src="/zoo-arcadia/asset/img_habitats/savanevertical.jpeg" alt="Photo de la savane" class="carousel-image" data-title="Savane "></a>
+                <?php foreach($habitats as $habitat):?>
+                    <a href="../main/habitats.php?habitat=habitat<?= $habitat['habitat_id']?>#scrolldown"><img src="../../../asset/img_habitats/habitat<?= $habitat['habitat_id']?>.png" alt="Photo <?= $habitat['name']?>" class="carousel-image active" data-title="<?= $habitat['name']?>"></a>
+                <?php endforeach ?>
 
                 <div class="title-img"></div>
                   

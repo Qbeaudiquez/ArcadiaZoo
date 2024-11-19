@@ -31,7 +31,7 @@ if (isset($postData["userName"]) && isset($postData["password"])) {
     </li>
 
     <li class="connexionContainer">
-        <form action="../main/index.php" method="post" class="formConnexion">
+        <form method="post" class="formConnexion">
             <label for="userName"></label>
             <input type="text" id="userName" name="userName" placeholder="Pseudo">
 
@@ -50,7 +50,7 @@ if (isset($postData["userName"]) && isset($postData["password"])) {
         </p>
     </li>
     <li class="link">
-        <a href="dashbord.php?service=dashbord">Dashbord</a>
+        <a href="dashbord.php?service=dashbord&habitat=dashbord">Dashbord</a>
     </li>
     <li>
         <button class="deconnexionBtn link">

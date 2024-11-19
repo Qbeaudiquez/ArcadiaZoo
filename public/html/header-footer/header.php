@@ -1,6 +1,7 @@
 <!-- Start session -->
 <?php session_start();?>
 
+
 <!-- Initialization script php -->
 <?php require_once(__DIR__ . "../../../../src/variables.php"); ?>
 
@@ -31,9 +32,9 @@
     <nav>
         <ul class="navbar">
             <li><a id="home" href="../main/index.php" class="link">Accueil</a></li>
-            <li><a id="services" href="../main/services.php?service=services" class="link">Services</a></li>
-            <li><a id="habits" href="../main/habitats.php" class="link">Habitats</a></li>
-            <li><a id="contact" href="../main/contact.php" class="link">Contact</a></li>
+            <li><a id="services" href="../main/services.php?service=services#scrolldown" class="link">Services</a></li>
+            <li><a id="habits" href="../main/habitats.php?habitat=habitats#scrolldown" class="link">Habitats</a></li>
+            <li><a id="contact" href="../main/contact.php#scrolldown" class="link">Contact</a></li>
             <?php require_once(__DIR__ . "/../../../src/login.php"); ?>
             
         </ul>

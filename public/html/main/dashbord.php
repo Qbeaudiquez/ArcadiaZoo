@@ -9,20 +9,21 @@
 </head>
 <body>
 <?php require_once(__DIR__ . "/../header-footer/header.php"); ?>
+
+<main id="scrolldown" class="main">
 <?php if(isset($_SESSION['LOGGED_ROLE_ID'])) : ?>
 
 <?php 
-$adminAccess = $_SESSION['LOGGED_ROLE_ID'] === 1;
-$vetAcces = $_SESSION['LOGGED_ROLE_ID'] === 2;
-$employeAcces = $_SESSION['LOGGED_ROLE_ID'] === 3;
+    $adminAccess = $_SESSION['LOGGED_ROLE_ID'] === 1;
+    $vetAccess = $_SESSION['LOGGED_ROLE_ID'] === 2;
+    $employeAcces = $_SESSION['LOGGED_ROLE_ID'] === 3; 
 ?>
-<main id="scrolldown" class="main">
-    
+
 
 
 <!-- Reviews -->
     <h3>Avis</h3>
-    <?php if($adminAccess || $employeAcces): ?>
+    <?php if((isset($adminAccess) || isset($employeAcces)) && ($adminAccess || $employeAcces)): ?>
         
         <?php
             
@@ -32,12 +33,12 @@ $employeAcces = $_SESSION['LOGGED_ROLE_ID'] === 3;
 
             
             if (empty($unmoderatedReviews)): ?>
-            <div class='dashbordContainer reviews'>
-                <p>Aucun avis en attente de modération.</p>
+            <div class='dashbordContainer'>
+                <p class="noReview">Aucun avis en attente de modération.</p>
             </div>
                     
         <?php else: ?>
-            <div class='dashbordContainer '>
+            <div class='dashbordContainer reviews'>
                 <?php foreach ($unmoderatedReviews as $review): ?>
                     <div class="reviewsContainer">
                     <div style="
@@ -78,9 +79,9 @@ $employeAcces = $_SESSION['LOGGED_ROLE_ID'] === 3;
     <?php endif; ?>
 
 <!-- Services -->
-<h3>Services</h3>
-<div class='dashbordContainer services'>
 <?php if($adminAccess || $employeAcces):?>
+    <h3>Services</h3>
+    <div class='dashbordContainer services'>
     <div class="serviceContainer">
         <?php require_once(__DIR__ . "/../../../src/insertServices.php"); ?>
     </div>
@@ -88,7 +89,7 @@ $employeAcces = $_SESSION['LOGGED_ROLE_ID'] === 3;
 
 <div class="makeContainer">
     <h3>Créer un nouveau service</h3>
-    <form class="makeServiceForm" action="../../../src/moderateServices.php" method="post" enctype="multipart/form-data">
+    <form class="makeServiceForm formulaire" action="../../../src/moderateServices.php" method="post" enctype="multipart/form-data">
 
         <label for="newServiceName">Nom du service</label>
         <input type="text" name="newServiceName" id="newServiceName" required>
@@ -103,6 +104,93 @@ $employeAcces = $_SESSION['LOGGED_ROLE_ID'] === 3;
 </div>
 <?php endif;?>
 </div>
+
+<?php if($adminAccess):?>
+    <?php require_once(__DIR__ . "/../../../src/insertUserCreation.php"); ?>
+<?php endif?>
+<h3>Habitats</h3>
+<div class="dashbordContainer habitat">
+<?php if($adminAccess || $vetAccess):?>
+    <div class="habitatContainer">
+        <?php require_once(__DIR__ . "/../../../src/insertHabitats.php"); ?>
+    </div>
+    <?php if($adminAccess):?>
+    <div class="makeContainer">
+    <h3>Créer un nouveau habitat</h3>
+    <form class="makeHabitatForm formulaire" action="../../../src/moderateHabitat.php" method="post" enctype="multipart/form-data">
+
+        <label for="newHabitatName">Nom de l'habitat</label>
+        <input type="text" name="newHabitatName" id="newHabitatName" required>
+
+        <label for="newHabitatDesc">Description</label>
+        <textarea name="newHabitatDesc" id="newHabitatDesc" required></textarea>
+
+        <label for="newImage">Choisir une image :</label>
+        <input type="file" name="newHabitatImage" id="newHabitatImage" accept="image/*">
+        <button type="submit">Créer</button>
+    </form>
+</div>
+
+<?php endif?>
+
+<?php endif?>
+</div>
+
+
+<?php if($adminAccess || $employeAcces || $vetAccess):?>
+    <h3>Animaux</h3>
+    <div class="dashbordContainer animals">
+        <?php require_once(__DIR__ . "/../../../src/insertAnimalForm.php"); ?>
+        <?php if($adminAccess):?>
+    
+    <div class="makeContainer animal">
+    <h3 >Créer un nouveau animal</h3>
+    <form class="makeHabitatForm formulaire" action="../../../src/moderateAnimal.php" method="post" enctype="multipart/form-data">
+
+        <label for="newAnimalName">Nom de l'animal:</label>
+        <input type="text" name="newAnimalName" id="newAnimalName" required>
+
+        <label for="newAnimalRace">Race : </label>
+        <textarea name="newAnimalRace" id="newAnimalRace" required></textarea>
+
+        <label for="newHabitatId">Habitat :</label>
+        <select name="newHabitatId" id="newHabitatId">
+            <?php foreach($habitats as $habitat):?>
+                <option value="<?= $habitat["habitat_id"]?>"><?= $habitat["name"]?></option>
+            <?php endforeach?>
+        </select>
+
+        <label for="newAnimalImage">Choisir une image :</label>
+        <input type="file" name="newAnimalImage" id="newAnimalImage" accept="image/*">
+        <button type="submit">Créer</button>
+    </form>
+</div>
+
+<?php endif?>
+    </div>
+    </div>
+<?php endif;?>
+<?php if($adminAccess):?>
+    <h3>Comptes rendu vétérinaire</h3>
+    <div class="dashbordContainer report">
+        <?php foreach($reports as $report):?>
+            <?php foreach($animals as $animal):?>
+                <?php if($animal["animal_id"] === $report["animal_id"]):?>
+            <div class="reportsContainer">
+                <div class="report">
+                    <p>Nom : <?= $animal["name"]?></p>
+                    <p>Etat : <?= $report["etat"]?></p>
+                    <p>Detail : <?= $report["detail"]?></p>
+                    <p>Nouriture recommandé : <?= $report["food"]?></p>
+                    <p>Quantité journalière : <?= $report["weight"]?></p>
+                    <p>Dernier passage : <?= $report["date"]?></p>
+                </div>
+            </div>
+            <?php endif;?>
+            <?php endforeach?> 
+        <?php endforeach?>    
+    </div>
+<?php endif;?>
 <?php else :?>
   <?=  "<div class='dashbordContainer reviews'><p>Veuillez vous connecter</p></div>"?>
 

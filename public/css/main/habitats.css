@@ -1,236 +1,123 @@
 .main{
     display: flex;
-    padding: 100px 0;
     align-items: center;
     justify-content: center;
+    flex-direction: column;
+    gap: 30px;
+    padding-top: 100px;
 }
-
 .cardsContainer{
     display: flex;
-    flex-wrap: wrap;
-    align-items: center;
     justify-content: center;
-    gap: 10px;
-    width: 100%;
-}
-
-.cardsContainer .cardContainer{
-    display: none;
-    flex-direction: column;
     align-items: center;
     text-align: center;
-    justify-content: space-between;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: bottom;
-    width: 320px;
-    height: 600px;
     color: var(--second-color);
-    z-index: 1;
-    cursor: pointer;
+    flex-wrap: wrap;
+    position: relative;
+}
+
+.cardsContainer .backHabitats{
+position: absolute;
+top: 30px;
+left: -34px;
+padding: 5px;
+transition: all .2s ease-in-out;
+}
+
+.cardsContainer .backHabitats:hover{
+    transform: rotate(90deg);
+}
+
+.cardsContainer .cards{
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    gap: 20px;
+    flex-direction: column;
+    background-color: var(--first-color);
+    padding: 30px 0;
+    border-radius: 10px;
+    transition: all .2s ease-in-out;
+    margin: 0 10px;
+}
+
+.cardsContainer .cards .cardImg{
+    max-height: 340px;
     transition: all .2s ease-in-out;
 }
 
-.cardsContainer .cardContainer:hover{
-    scale: 1.05;
+
+
+.cardsContainer .cards .cardDesc{
+    max-width: 340px;
+    padding: 10px 30px 30px 30px;
 }
 
-.cardsContainer .cross{
-        align-self: flex-end;
-        height: 40px;
-        cursor: pointer;
-        display: none;
-        transform: translate(10px, -5px);
+.cardsContainer:hover .cards:not(:hover){
+    scale: .95;
+}
+.cardsContainer:hover .cards .cardImg:not(:hover){
+    filter: grayscale(1);
 }
 
-.cardsContainer .cardContainer h3,.cardsContainer .cardContainer p{
-    background-color: #ffffffa8;
-    margin: 20px 0;
-    padding: 5px;
+.cardsContainer .cards a{
+    height: 340px;
+    
 }
 
-.cardsContainer .cardContainer p {
-    opacity: 0;
-    transition: opacity .2s ease-in-out;
-}
-
-.cardsContainer .cardContainer:hover p{
-    opacity: 1;
-}
-
-.cardsContainer .cardContainer.autralian{
-    background-image: url("/zoo-arcadia/asset/img_habitats/desertaustralienvertical.jpeg");
-}
-
-.cardsContainer .cardContainer.frenchForest{
-    background-image: url("/zoo-arcadia/asset/img_habitats/foretfrancaisevertical.jpeg");
-}
-
-.cardsContainer .cardContainer.nordicForest{
-    background-image: url("/zoo-arcadia/asset/img_habitats/foretnordiquevertical.jpeg");
-}
-
-.cardsContainer .cardContainer.montagne{
-    background-image: url("/zoo-arcadia/asset/img_habitats/montagnevertical.jpeg");
-}
-
-.cardsContainer .cardContainer.savana{
-    background-image: url("/zoo-arcadia/asset/img_habitats/savanevertical.jpeg");
-}
-
-.cardsContainer .animalsContainer{
-    justify-content: center;
+.animalsCard{
+    display: flex;
     align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 100px;
+    color: var(--second-color);
+}
+
+.animalsCard .cards{
+    display: flex;
     flex-direction: column;
+    margin: 0 10px;
+    background-color: var(--first-color);
+    padding: 10px;
+    border-radius: 8px;
     gap: 10px;
-    display: none;
+    position: relative;
 }
 
-.cardsContainer .animalsContainer .cardAnimal{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    color: var(--first-color);
-    width: 400px;
-
+.animalsCard .animalImg{
+    max-width: 340px;
+    
 }
 
-.cardsContainer .animalsContainer .cardAnimal .animal{
-    display: flex;
-    flex-direction: column;
-    justify-content: end;
-    width: 50%;
-    height: 200px;
-    background-size: cover;
-    z-index: 1;
-    cursor: pointer;
-}
-
-.cardsContainer .animalsContainer .cardAnimal .animal.eigle{
-    background-image: url("/zoo-arcadia/asset/img_animals/autralia/eigle.png");
-}
-
-.cardsContainer .animalsContainer .cardAnimal .animal.kangaroo{
-    background-image: url("/zoo-arcadia/asset/img_animals/autralia/kangaroo.png");
-}
-
-.cardsContainer .animalsContainer .cardAnimal .animal.quokka{
-    background-image: url("/zoo-arcadia/asset/img_animals/autralia/quokka.png");
-}
-
-.cardsContainer .animalsContainer .cardAnimal .animal.sanglier{
-    background-image: url("/zoo-arcadia/asset/img_animals/frenchforest/sanglier.png");
-}
-
-.cardsContainer .animalsContainer .cardAnimal .animal.cerf{
-    background-image: url("/zoo-arcadia/asset/img_animals/frenchforest/cerf.png");
-}
-
-.cardsContainer .animalsContainer .cardAnimal .animal.renard{
-    background-image: url("/zoo-arcadia/asset/img_animals/frenchforest/renard.png");
-}
-
-.cardsContainer .animalsContainer .cardAnimal .animal.elan{
-    background-image: url("/zoo-arcadia/asset/img_animals/nordicforest/elan.png");
-}
-
-.cardsContainer .animalsContainer .cardAnimal .animal.lynx{
-    background-image: url("/zoo-arcadia/asset/img_animals/nordicforest/lynx.png");
-}
-
-.cardsContainer .animalsContainer .cardAnimal .animal.renardPolaire{
-    background-image: url("/zoo-arcadia/asset/img_animals/nordicforest/renardPolaire.png");
-}
-
-.cardsContainer .animalsContainer .cardAnimal .animal.chamois{
-    background-image: url("/zoo-arcadia/asset/img_animals/montagne/chamois.png");
-}
-
-.cardsContainer .animalsContainer .cardAnimal .animal.mouflon{
-    background-image: url("/zoo-arcadia/asset/img_animals/montagne/mouflon.png");
-}
-
-.cardsContainer .animalsContainer .cardAnimal .animal.gypaete{
-    background-image: url("/zoo-arcadia/asset/img_animals/montagne/gypaete.png");
-}
-
-.cardsContainer .animalsContainer .cardAnimal .animal.lion{
-    background-image: url("/zoo-arcadia/asset/img_animals/savane/lion.png");
-}
-
-.cardsContainer .animalsContainer .cardAnimal .animal.elephant{
-    background-image: url("/zoo-arcadia/asset/img_animals/savane/elephant.png");
-}
-
-.cardsContainer .animalsContainer .cardAnimal .animal.girafe{
-    background-image: url("/zoo-arcadia/asset/img_animals/savane/girafe.png");
-}
-
-.cardsContainer .animalsContainer .cardAnimal .animal h4 ,.cardsContainer .animalsContainer .cardAnimal .animal p{
-    background-color: rgba(0, 0, 0, 0.498);
-}
-
-.cardsContainer .animalsContainer .cardAnimal .infoAnimal{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 50%;
+.animalsCard .cards .showDisplay{
     background-color: var(--second-color);
-    transform: translateX(-100%);
-    height: 200px;
-    transition: transform .2s ease-in-out;
+    color: var(--first-color);
+    border: none;
+    padding: 5px;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: .2s all ease-in-out;
 }
 
-.cardsContainer .animalsContainer .cardAnimal .infoAnimal ul{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
+.animalsCard .cards .showDisplay:hover{
+background-color: var(--third-color);
 }
 
-.cardsContainer .animalsContainer .cardAnimal .infoAnimal li{
-    display: flex;
+.animalsCard .cards .report{
+    position: absolute;
+    transition: all .4s ease-in-out;
+    left: 0;
+    top: 0;
+    background-color: var(--first-color);
+    width: 100%;
+    padding: 10px;
+    border-radius: 0 0 8px 8px;
+    z-index: -1;
+    
 }
 
-.cardsContainer .animalsContainer .cardAnimal .infoAnimal li h5{
-    font-size: 16px;
-}
-
-.cardsContainer .animalsContainer .cardAnimal .infoAnimal li p{
-    font-size: 14px;
-
-}
-
-.cardsContainer .cardContainer.active{
-    display: flex;
-}
-
-.cardsContainer .animalsContainer.active{
-    display: flex;
-}
-
-@media (max-width: 700px){
-    .cardsContainer .animalsContainer{
-        gap: 10px;
-        display: flex;
-    }
-
-    .cardsContainer .animalsContainer .cardAnimal{
-        flex-direction: column;
-    }
-
-    .cardsContainer .animalsContainer .cardAnimal .infoAnimal{
-        transform: unset;
-
-    }
-
-    .cardsContainer .cardContainer p{
-        opacity: 1;
-    }
-
-    .cardsContainer .cardContainer:hover{
-        scale: 1;
-    }
+.animalsCard .cards .report.active{
+    top: 99%;
+    display: block;
 }

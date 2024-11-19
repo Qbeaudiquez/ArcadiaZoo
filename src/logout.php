@@ -4,6 +4,6 @@ session_unset();
 session_destroy();
 
 
-header("Location: ../public/html/main/index.php");
+header('Location: ' . $_SERVER['HTTP_REFERER']);
 exit;
 ?>

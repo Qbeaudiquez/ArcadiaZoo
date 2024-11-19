@@ -4,7 +4,7 @@
 
 $postData = $_POST;
 
-
+// Delete service
 if($postData["action"] === "delete"){
     $id = (int)$_POST['id'];
     $stmt = $mysqlClient->prepare("DELETE FROM service WHERE service_id = :id");
@@ -12,12 +12,7 @@ if($postData["action"] === "delete"){
     unlink("../asset/img_service/service{$id}.png");
 }
 
-
-
-
-
-
-
+// Edit service
 if (isset($postData["serviceName"]) && isset($postData["serviceDesc"])) {
     $id = (int)$_POST['id'];
     $stmt = $mysqlClient->prepare("
@@ -34,7 +29,7 @@ if (isset($postData["serviceName"]) && isset($postData["serviceDesc"])) {
     ]);
 }
 
-if(isset($$_FILES["image"])){
+if(isset($_FILES["image"])){
     $postFiles = $_FILES["image"];
     $fileTmpPath = $postFiles["tmp_name"];
     $fileOriginalName = $postFiles['name'];
@@ -46,8 +41,10 @@ if(isset($$_FILES["image"])){
     move_uploaded_file($fileTmpPath, $uploadFilePath);
 }
 
+// Make new service
+
 if(isset($postData["newServiceName"]) 
-&& isset($postData["newServiceName"]) 
+&& isset($postData["newServiceDesc"]) 
 && isset($_FILES["newImage"])){
     $newPostFiles = $_FILES["newImage"];
     $name = $postData["newServiceName"];
@@ -73,6 +70,8 @@ if(isset($postData["newServiceName"])
     $uploadFilePath = $uploadDir . $newFileName;
     move_uploaded_file($fileTmpPath, $uploadFilePath);
 }
+
+// Return dashbord
 
 header('Location: ' . $_SERVER['HTTP_REFERER']);
 exit;

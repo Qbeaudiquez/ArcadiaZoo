@@ -216,4 +216,30 @@
     }
 }
 
+/* Keyframes */
 
+@keyframes pulse {
+    from, to { transform: scale(1, 1); }
+    25% { transform: scale(0.9, 1.1); }
+    50% { transform: scale(1.1, 0.9); }
+    75% { transform: scale(0.95, 1.05); }
+  }
+
+  @keyframes comingtop {
+    from { transform:translateY(-200px); }
+  to { transform:translateY(0px); }
+    
+  }
+  
+  @keyframes comingdown {
+    from { transform:translateY(200px); }
+  to { transform:translateY(0px); }
+    
+  }
+
+
+  @keyframes fade-in {
+    from { scale: 0; }
+  to { scale: 1; }
+    
+  }
