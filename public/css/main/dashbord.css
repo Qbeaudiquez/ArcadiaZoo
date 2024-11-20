@@ -231,16 +231,21 @@
     justify-content: center;
     width: 100%;
     color: var(--first-color);
+    flex-direction: column;
+    gap: 5px;
 }
 
 .animals .searchInputcontainer #searchInput{
     background-color: var(--third-color);
     border: none;
     padding: 5px;
+    border-radius: 4px;
+    text-align: center;
 }
 
 .animals .searchInputcontainer #searchInput::placeholder{
     color: var(--first-color);
+    text-align: center;
 }
 
 .animals .cards{

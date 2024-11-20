@@ -1,4 +1,4 @@
-<script src="../../js/habitats/searchInput.js" defer></script>
+<script src="../../js/dashbord/searchInput.js" defer></script>
 <?php foreach ($habitats as $habitat): ?>
     <?php foreach ($animals as $animal): ?>
         <?php if ($habitat["habitat_id"] === $animal["habitat_id"]): ?>

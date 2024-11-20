@@ -142,7 +142,10 @@
 <?php if($adminAccess || $employeAcces || $vetAccess):?>
     <h3>Animaux</h3>
     <div class="dashbordContainer animals">
-        <div class="searchInputcontainer"><input type="text" name="" id="searchInput" placeholder="Nom de l'animal"></div>
+        <div class="searchInputcontainer">
+            <h4>Recherchez un animal : </h4>
+            <input type="text" name="" id="searchInput" placeholder="Nom de l'animal">
+        </div>
         <?php require_once(__DIR__ . "/../../../src/insertAnimalForm.php"); ?>
         <?php if($adminAccess):?>
     
