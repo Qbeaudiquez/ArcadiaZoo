@@ -3,7 +3,7 @@
 
 
 <!-- Initialization script php -->
-<?php require_once(__DIR__ . "../../../../src/variables.php"); ?>
+<?php require_once(__DIR__ . "/zoo-arcadia/src/variables.php"); ?>
 
 
 <!-- Initialization script js -->
@@ -31,11 +31,11 @@
 
     <nav>
         <ul class="navbar">
-            <li><a id="home" href="../main/index.php" class="link">Accueil</a></li>
-            <li><a id="services" href="../main/services.php?service=services#scrolldown" class="link">Services</a></li>
-            <li><a id="habits" href="../main/habitats.php?habitat=habitats#scrolldown" class="link">Habitats</a></li>
-            <li><a id="contact" href="../main/contact.php#scrolldown" class="link">Contact</a></li>
-            <?php require_once(__DIR__ . "/../../../src/login.php"); ?>
+            <li><a id="home" href="/zoo-arcadia/public/html/main/index.php" class="link">Accueil</a></li>
+            <li><a id="services" href="/zoo-arcadia/public/html/main/services.php?service=services#scrolldown" class="link">Services</a></li>
+            <li><a id="habits" href="/zoo-arcadia/public/html/main/habitats.php?habitat=habitats#scrolldown" class="link">Habitats</a></li>
+            <li><a id="contact" href="/zoo-arcadia/public/html/main/contact.php#scrolldown" class="link">Contact</a></li>
+            <?php require_once(__DIR__ . "/zoo-arcadia/src/login.php"); ?>
             
         </ul>
     </nav>            
