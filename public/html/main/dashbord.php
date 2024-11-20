@@ -272,10 +272,14 @@
         </div>
     </div>
 <?php endif;?>
+
+<?php require_once(__DIR__ . "../../../../src/insertTargetValue.php"); ?>
+                    
+
 <?php else :?>
   <?=  "<div class='dashbordContainer reviews'><p>Veuillez vous connecter</p></div>"?>
 
-<?php endif;?>
+<?php endif?>
 
 
 

@@ -73,6 +73,6 @@ if(isset($postData["newServiceName"])
 
 // Return dashbord
 
-header('Location: ' . $_SERVER['HTTP_REFERER']);
+header('Location: ' . $_SERVER['HTTP_REFERER'] . '#serviceAncor');
 exit;
 ?>

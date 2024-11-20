@@ -30,5 +30,5 @@ $habitats = fetchData($mysqlClient, 'SELECT * FROM habitat');
 $animals = fetchData($mysqlClient, 'SELECT * FROM animal');
 $reports = fetchData($mysqlClient, 'SELECT * FROM veteninary_report');
 $employeReports = fetchData($mysqlClient, 'SELECT * FROM employe_report');
-
+$targets = fetchData($mysqlClient, 'SELECT * FROM target_value');
 

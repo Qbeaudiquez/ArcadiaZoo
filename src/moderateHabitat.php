@@ -81,6 +81,6 @@ if(isset($postData["habitatCommentaire"])){
 
 // Return dashbord
 
-header('Location: ' . $_SERVER['HTTP_REFERER']);
+header('Location: ' . $_SERVER['HTTP_REFERER'] . '#habitatAncor');
 exit;
 ?>

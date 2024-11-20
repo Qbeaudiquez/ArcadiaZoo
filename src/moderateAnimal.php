@@ -18,6 +18,9 @@ if(isset($_POST['id'])){
 if(isset($postData["action"])){
     $stmt = $mysqlClient->prepare("DELETE FROM animal WHERE animal_id = :id");
     $stmt->execute([':id' => $id]);
+    
+    $stmtTargetValue = $mysqlClient->prepare("DELETE FROM target_value WHERE animal_id = :id");
+    $stmtTargetValue->execute([':id' => $id]);
     unlink("../asset/img_animals/{$id}.png");
 }
 
@@ -167,6 +170,7 @@ if(isset($postData["newAnimalName"])
     
 
     try{
+
         $animalStatement = $mysqlClient->prepare("INSERT INTO animal (name, race, habitat_id) VALUES (:name, :race, :habitat_id)");
         $animalStatement->execute([
             ':name' => $name,
@@ -179,6 +183,17 @@ if(isset($postData["newAnimalName"])
 
     $newId = $mysqlClient->lastInsertId();
 
+    try{
+
+        $valueStatement = $mysqlClient->prepare("INSERT INTO target_value ( animal_id) VALUES (:animal_id)");
+        $valueStatement->execute([
+            'animal_id' => $newId
+        ]);
+    }catch(PDOException $exception){
+        echo "<script>alert('Une erreur est survenue : {$exception->getMessage()}')</script>";
+    }
+
+
     $fileTmpPath = $newPostFiles["tmp_name"];
     $newFileName = "{$newId}." . "png";
     $uploadDir = '../asset/img_animals/';
@@ -188,6 +203,6 @@ if(isset($postData["newAnimalName"])
 
 // Return dashbord
 
-header('Location: ' . $_SERVER['HTTP_REFERER']);
+header('Location: ' . $_SERVER['HTTP_REFERER'] . '#animalAncor');
 exit;
 ?>

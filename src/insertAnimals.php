@@ -1,3 +1,4 @@
+<script src="/zoo-arcadia/public/js/habitats/targetValue.js"></script>
 <?php if (isset($_GET["habitat"])): ?>
     <?php foreach ($habitats as $habitat): ?>
         <?php $habitat["identifier"] = "habitat{$habitat['habitat_id']}"; ?>
@@ -8,7 +9,7 @@
                     <div class="cards">
                         <h4 class="animalName">Nom : <?= htmlspecialchars($animal["name"]) ?></h4>
                         <img class="animalImg" src="../../../asset/img_animals/<?= htmlspecialchars($animal["animal_id"]) ?>.png" alt="Image de l'animal">
-                        <button class="showDisplay">Clic pour plus de détail</button>
+                        <button class="showDisplay" data-animal-id="<?= $animal['animal_id'] ?>">Clic pour plus de détail</button>
 
                         <?php
                         

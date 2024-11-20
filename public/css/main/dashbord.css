@@ -367,3 +367,34 @@
     display: flex;
     flex-direction: column;
 }
+
+/* Target value */
+
+.dashbordContainer.targetValue .compterContainer{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    width: 100%;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.dashbordContainer.targetValue .compterContainer .compter{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: var(--third-color);
+    padding: 5px;
+    border-radius: 8px;
+    min-width: 110px;
+    min-height: 110px;
+}
+
+.dashbordContainer.targetValue .compterContainer .compter h4{
+    font-size: 20px;
+}
+
+.dashbordContainer.targetValue .compterContainer .compter p{
+    font-size: 60px;
+}

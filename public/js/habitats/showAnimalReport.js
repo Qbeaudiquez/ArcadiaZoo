@@ -8,3 +8,5 @@ animalBtns.forEach(btn => {
     btn.style.display = "none"
 })
 });
+
+
