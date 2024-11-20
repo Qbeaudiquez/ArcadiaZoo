@@ -59,13 +59,14 @@
             
         </div>
         <div class="review" id="formAnchor">
-
+                    <h3 style="margin-top: 50px; color:var(--second-color)">Ce qu'ils pensent de nous : </h3>
             <div class="randomReview">
+                
             <?php require_once(__DIR__ . "../../../../src/insertReview.php"); ?>
             </div>
 
             <?php require_once(__DIR__ . "../../../../src/review.php"); ?>
-
+                    <h3 style="margin-top:20px; color:var(--second-color)">Hesitez pas a nous laisser un avis : </h3>
             <form class="reviewForm" action="index.php#formAnchor" method="post">
                 <div class="reviewName">
                   <label for="pseudo">Entrer votre nom : </label>

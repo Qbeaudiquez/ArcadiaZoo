@@ -11,9 +11,12 @@
 <body>
 <?php require_once(__DIR__ . "/../header-footer/header.php"); ?>
 <?php 
+if(isset($_SESSION['LOGGED_ROLE_ID'])){
     $adminAccess = $_SESSION['LOGGED_ROLE_ID'] === 1;
     $vetAccess = $_SESSION['LOGGED_ROLE_ID'] === 2;
-    $employeAcces = $_SESSION['LOGGED_ROLE_ID'] === 3; 
+    $employeAcces = $_SESSION['LOGGED_ROLE_ID'] === 3;
+}
+     
 ?>
 
 
