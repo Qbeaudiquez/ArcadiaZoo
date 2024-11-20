@@ -1,5 +1,5 @@
 document.getElementById("searchInput").addEventListener("input", function () {
-    let searchValue = this.value.toLowerCase(); 
+    const searchValue = this.value.toLowerCase(); 
     const cards = document.querySelectorAll(".animalCard"); 
 
     cards.forEach(card => {

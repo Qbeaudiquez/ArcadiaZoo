@@ -1,14 +1,37 @@
 /* All */
 
+
+
 .main{
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 20px;
     color: var(--second-color);
     padding-top: 100px;
     width: 100%;
+}
+.navbarDashbord{
+    position: fixed;
+    left: 0;
+    top: 50%;
+    background-color: var(--third-color);
+    padding: 8px;
+    border-radius: 0 10px 10px 0;
+    z-index: 1;
+    
+}
+
+.navbarDashbord ul{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+}
+
+.navbarDashbord ul img:hover{
+    scale: 1.1;
 }
 
 .dashbordContainer{
@@ -25,6 +48,11 @@
     padding: 30px;
     border-radius: 8px;
     flex-wrap: wrap;
+}
+
+.containerTitle{
+    padding-top: 100px;
+    margin-bottom: 30px;
 }
 
 .dashbordContainer button{
@@ -296,11 +324,46 @@
 
 /* Reports */
 
-.dashbordContainer.report .reportsContainer{
+.dashbordContainer.report .seachReportInputContainer{
     display: flex;
     flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
     gap: 5px;
+}
+
+.dashbordContainer.report .seachReportInputContainer select{
+    background-color: var(--second-color);
+    color: var(--first-color);
+    width: 100%;
+    gap: 5px;
+    border-radius: 5px;
+    text-align: center;
+    border: 1px solid var(--first-color);
+}
+
+.dashbordContainer.report .reportContainer{
+    display: flex;
+    margin-top: 30px;
+    flex-wrap: wrap;
+    gap: 10px;
+    width: 100%;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.dashbordContainer.report .reportContainer .report{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
     background-color: var(--third-color);
     padding: 5px;
     border-radius: 3px;
+    max-width: 200px;
+}
+
+.dashbordContainer.report .reportsContainer .report .reportInfo{
+    display: flex;
+    flex-direction: column;
 }

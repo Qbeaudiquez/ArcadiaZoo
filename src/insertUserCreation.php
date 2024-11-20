@@ -1,4 +1,3 @@
-<h3>Créer un nouveau compte</h3>
     <div class='dashbordContainer '>
         <form class="formulaire newUser" action="" method="post">
             <label for="nameUserNewUser">Nom d'utilisateur :</label>
