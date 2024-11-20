@@ -32,11 +32,13 @@
 
                         <button type="submit">Editer</button>
                     </form>
-                    <form method="POST" action="../../../src/moderateServices.php">
-                        <input type="hidden" name="action" value="delete">
-                        <input type="hidden" name="id" value="<?= $service['service_id'] ?>">
-                        <button type="submit">Supprimer</button>
-                    </form>
+                    <?php if($adminAccess):?>
+                        <form method="POST" action="../../../src/moderateServices.php">
+                            <input type="hidden" name="action" value="delete">
+                            <input type="hidden" name="id" value="<?= $service['service_id'] ?>">
+                            <button type="submit">Supprimer</button>
+                        </form>
+                    <?php endif ?>
             <?php endif ?>
         </div>
     <?php endif; ?>

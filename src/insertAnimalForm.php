@@ -1,7 +1,8 @@
+<script src="../../js/habitats/searchInput.js" defer></script>
 <?php foreach ($habitats as $habitat): ?>
     <?php foreach ($animals as $animal): ?>
         <?php if ($habitat["habitat_id"] === $animal["habitat_id"]): ?>
-            <div class="cancelAnimal">
+            <div class="cancelAnimal animalCard" data-name='<?= htmlspecialchars($animal['name']) ?>'>
                 <?php if($adminAccess):?>
                     <form method="POST" action="../../../src/moderateAnimal.php">
                         <input type="hidden" name="action" value="delete">
@@ -10,7 +11,7 @@
                     </form>
                 <?php endif; ?>
                 
-                <form class="formulaire cards" method="post" action="../../../src/moderateAnimal.php" enctype="multipart/form-data">
+                <form class="formulaire cards" method="post" action="../../../src/moderateAnimal.php" enctype="multipart/form-data" >
                     <h5 class="inputInfo">Nom : 
                         <?php if ($vetAccess || $employeAcces): ?>
                             <?= $animal["name"] ?>

@@ -108,9 +108,11 @@
 <?php if($adminAccess):?>
     <?php require_once(__DIR__ . "/../../../src/insertUserCreation.php"); ?>
 <?php endif?>
-<h3>Habitats</h3>
-<div class="dashbordContainer habitat">
+
+
 <?php if($adminAccess || $vetAccess):?>
+    <h3>Habitats</h3>
+<div class="dashbordContainer habitat">
     <div class="habitatContainer">
         <?php require_once(__DIR__ . "/../../../src/insertHabitats.php"); ?>
     </div>
@@ -132,14 +134,15 @@
 </div>
 
 <?php endif?>
-
-<?php endif?>
 </div>
+<?php endif?>
+
 
 
 <?php if($adminAccess || $employeAcces || $vetAccess):?>
     <h3>Animaux</h3>
     <div class="dashbordContainer animals">
+        <div class="searchInputcontainer"><input type="text" name="" id="searchInput" placeholder="Nom de l'animal"></div>
         <?php require_once(__DIR__ . "/../../../src/insertAnimalForm.php"); ?>
         <?php if($adminAccess):?>
     

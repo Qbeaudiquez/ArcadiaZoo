@@ -225,6 +225,24 @@
     align-items: start;
 }
 
+.animals .searchInputcontainer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    color: var(--first-color);
+}
+
+.animals .searchInputcontainer #searchInput{
+    background-color: var(--third-color);
+    border: none;
+    padding: 5px;
+}
+
+.animals .searchInputcontainer #searchInput::placeholder{
+    color: var(--first-color);
+}
+
 .animals .cards{
     align-items: start;
     background-color: var(--third-color);
