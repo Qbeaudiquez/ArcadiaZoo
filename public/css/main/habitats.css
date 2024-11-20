@@ -121,3 +121,7 @@ background-color: var(--third-color);
     top: 99%;
     display: block;
 }
+
+.animalsCard .cards .report .vetReport{
+    margin-top: 10px;
+}
