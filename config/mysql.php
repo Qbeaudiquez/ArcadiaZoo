@@ -8,10 +8,11 @@ $hostname = $dbparts['host'];
 $username = $dbparts['user'];
 $password = $dbparts['pass'];
 $database = ltrim($dbparts['path'],'/');
-}
-
-$hostname = 'localhost';
+}else{
+    $hostname = 'localhost';
 $port = 3306;
 $database = 'zoo_arcadia';
 $username = 'root';
 $password = '';
+}
+
