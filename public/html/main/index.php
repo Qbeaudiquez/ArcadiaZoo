@@ -4,12 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Zoo Arcadia -Accueil</title>
-    <link rel="stylesheet" href="/zoo-arcadia/public/css/main/index.css">
-    <script src="/zoo-arcadia/public/js/main/carousel.js" defer></script>
-    <script src="/zoo-arcadia/public/js/main/ratingStar.js"></script>
+    <link rel="stylesheet" href="/public/css/main/index.css">
+    <script src="/public/js/main/carousel.js" defer></script>
+    <script src="/public/js/main/ratingStar.js"></script>
 </head>
 <body>
-<?php require_once(__DIR__ . "/zoo-arcadia/public/html/header-footer/header.html"); ?>
+<?php require_once(__DIR__ . "/public/html/header-footer/header.html"); ?>
     <main id="scrolldown" class="main">
 
             <!-- First carousel -->
@@ -21,9 +21,9 @@
             </div>
             <div class="carousel" id="carousel1">
 
-                <button class="btn before"><img src="/zoo-arcadia/asset/icon/arrow-left.svg" alt="Bouton précédent"></button>
+                <button class="btn before"><img src="/asset/icon/arrow-left.svg" alt="Bouton précédent"></button>
 
-                <button class="btn after"><img src="/zoo-arcadia/asset/icon/arrow-right.svg" alt="Bouton suivant"></button>
+                <button class="btn after"><img src="/asset/icon/arrow-right.svg" alt="Bouton suivant"></button>
 
                 <?php foreach($services as $service):?>
                     <a href="../main/services.php?service=service<?= $service['service_id']?>#scrolldown"><img src="../../../asset/img_service/service<?= $service['service_id']?>.png" alt="Photo <?= $service['name']?>" class="carousel-image active" data-title="<?= $service['name']?>"></a>
