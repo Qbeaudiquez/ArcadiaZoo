@@ -1,0 +1,400 @@
+/* All */
+
+
+
+.main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: var(--second-color);
+    padding-top: 100px;
+    width: 100%;
+}
+.navbarDashbord{
+    position: fixed;
+    left: 0;
+    top: 50%;
+    background-color: var(--third-color);
+    padding: 8px;
+    border-radius: 0 10px 10px 0;
+    z-index: 1;
+    
+}
+
+.navbarDashbord ul{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+}
+
+.navbarDashbord ul img:hover{
+    scale: 1.1;
+}
+
+.dashbordContainer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    min-height: 240px;
+    color: var(--first-color);
+    background-color: var(--second-color);
+    margin-bottom: 30px;
+    width: 90%;
+    min-width: 340px;
+    padding: 30px;
+    border-radius: 8px;
+    flex-wrap: wrap;
+}
+
+.containerTitle{
+    padding-top: 100px;
+    margin-bottom: 30px;
+}
+
+.dashbordContainer button{
+    background-color: var(--first-color);
+    border: none;
+    padding: 7px;
+    margin: 5px;
+    border-radius: 2px;
+    cursor: pointer;
+    color: var(--second-color);
+    transition: all .2s ease-in-out;
+}
+
+.dashbordContainer button:hover{
+    background-color: var(--third-color);
+}
+
+.dashbordContainer .makeContainer{
+    align-self: center;
+    justify-self: center;
+    text-align: center;
+}
+
+.dashbordContainer .formulaire{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+}
+
+.dashbordContainer .formulaire input, 
+.dashbordContainer .formulaire textarea{
+    background-color: var(--first-color);
+    border: none;
+    color: var(--second-color);
+    padding: 5px;
+}
+
+/* Reviews */
+
+.dashbordContainer.reviews{
+    gap: 40px;
+    flex-wrap: wrap;
+    
+}
+
+.dashbordContainer .noReview{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+}
+
+.dashbordContainer.reviews .reviewsContainer{
+        display: flex;
+        align-items:center;
+        justify-content:start;
+        max-width: 400px;
+}
+
+
+/* Services */
+
+.dashbordContainer.services{
+    gap: 30px;
+    flex-wrap: wrap;
+    text-align: center;
+    height: auto;
+    flex-direction: column;
+    
+}
+
+.dashbordContainer.services .serviceContainer{
+    display: flex;
+    align-items: start;
+    gap: 30px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.dashbordContainer.services .cards{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.dashbordContainer.services .cards img{
+    max-width: 300px;
+}
+
+.dashbordContainer.services .cards p{
+    max-width: 300px;
+}
+
+.dashbordContainer.services .cards .editServiceForm{
+    margin-top: 40px;
+}
+
+.dashbordContainer.services .makeContainer .makeServiceForm{
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+
+/* New user */
+
+.dashbordContainer .formulaire.newUser{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+
+.dashbordContainer .formulaire.newUser select{
+    padding: 5px;
+    background-color: var(--second-color);
+    cursor: pointer;
+}
+
+/* Habitats */
+
+.habitat{
+    gap: 50px 10px;
+    flex-wrap: wrap;
+    align-items: start;
+    display: flex;
+    flex-direction: row;
+    
+}
+
+.habitat .habitatContainer{
+    display: flex;
+    align-items: start;
+    gap: 50px 10px;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+}
+
+.habitat .habitatContainer .cardsAndFormulaire{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 30px;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.habitat .cards{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
+    flex-wrap: wrap;
+    width: 340px;
+
+}
+
+.habitat .cards .cardImg{
+    width: 100%;
+}
+
+.habitat .cards .cardDesc{
+    width: 340px;
+    padding: 20px;
+}
+.habitat .cards .cardDesc{
+    text-align: justify;
+}
+
+.habitat .habitatContainer .formulairesDiv{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+/* Insert animal */
+
+
+.cancelAnimal{
+    display: flex;
+    flex-direction: column;
+}
+.animals{
+    flex-wrap: wrap;
+    gap: 50px 10px;
+    align-items: start;
+}
+
+.animals .searchInputcontainer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    color: var(--first-color);
+    flex-direction: column;
+    gap: 5px;
+}
+
+.animals .searchInputcontainer #searchInput{
+    background-color: var(--third-color);
+    border: none;
+    padding: 5px;
+    border-radius: 4px;
+    text-align: center;
+}
+
+.animals .searchInputcontainer #searchInput::placeholder{
+    color: var(--first-color);
+    text-align: center;
+}
+
+.animals .cards{
+    align-items: start;
+    background-color: var(--third-color);
+    padding: 10px;
+    border-radius: 8px;
+    width: 340px;
+    
+}
+.animals .cards .inputInfo{
+    display: flex;
+    width: 100%;
+    gap: 5px;
+}
+.animals .cards input{
+    border-radius: 5px;
+    flex: 1;
+}
+
+.animals .cards .imgAnimal{
+    width: 100%;
+}
+
+.animals .cards .animalImgUpdate{
+    color: var(--first-color);
+    background-color: var(--third-color);
+}
+
+.animals .cards .animalDetail{
+    width: 100%;
+    min-height: 50px;
+}
+
+.animals .cards #validBtn:hover{
+    background-color: var(--second-color);
+    color: var(--first-color);
+}
+
+.makeHabitatForm select{
+    background-color: var(--second-color);
+    color: var(--first-color);
+}
+
+.makeContainer.animal{
+    width: 100%;
+}
+
+/* Reports */
+
+.dashbordContainer.report .seachReportInputContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 5px;
+}
+
+.dashbordContainer.report .seachReportInputContainer select{
+    background-color: var(--second-color);
+    color: var(--first-color);
+    width: 100%;
+    gap: 5px;
+    border-radius: 5px;
+    text-align: center;
+    border: 1px solid var(--first-color);
+}
+
+.dashbordContainer.report .reportContainer{
+    display: flex;
+    margin-top: 30px;
+    flex-wrap: wrap;
+    gap: 10px;
+    width: 100%;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.dashbordContainer.report .reportContainer .report{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    background-color: var(--third-color);
+    padding: 5px;
+    border-radius: 3px;
+    max-width: 200px;
+}
+
+.dashbordContainer.report .reportsContainer .report .reportInfo{
+    display: flex;
+    flex-direction: column;
+}
+
+/* Target value */
+
+.dashbordContainer.targetValue .compterContainer{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    width: 100%;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.dashbordContainer.targetValue .compterContainer .compter{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: var(--third-color);
+    padding: 5px;
+    border-radius: 8px;
+    min-width: 110px;
+    min-height: 110px;
+}
+
+.dashbordContainer.targetValue .compterContainer .compter h4{
+    font-size: 20px;
+}
+
+.dashbordContainer.targetValue .compterContainer .compter p{
+    font-size: 60px;
+}

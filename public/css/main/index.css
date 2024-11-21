@@ -106,26 +106,22 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    gap: 20px;
 }
 
 .review .randomReview{
+    position: relative;
     width: 100%;
-    height: auto;
-    min-height: 200px;
+    height: 200px;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: start;
     background-color: var(--second-color);
     z-index: 1;
-    margin: 70px 0;
     border-radius: 10px;
-}
+    overflow-y: scroll;
 
-.review .randomReview > * {
-    margin: 5px 30px ;
 }
-
+ 
 .reviewForm{
     z-index: 1;
     width: 100%;
@@ -164,18 +160,19 @@
     width: 30px;
     height: 30px;
     cursor: pointer;
+    transition: all .2s ease-in-out;
     
 }
 
 .reviewForm .starReviewContainer input:checked ~ .star svg{
     fill: #dac50a;
-    transition: all .4s ease-in-out;
+    transition: all .2s ease-in-out;
 
 }
 
 .reviewForm .starReviewContainer input:hover ~ .star svg{
     fill: #dac50a;
-    transition: all .4s ease-in-out;
+    transition: all .2s ease-in-out;
 }
 
 .reviewForm .reviewSubmit input{
@@ -219,4 +216,30 @@
     }
 }
 
+/* Keyframes */
 
+@keyframes pulse {
+    from, to { transform: scale(1, 1); }
+    25% { transform: scale(0.9, 1.1); }
+    50% { transform: scale(1.1, 0.9); }
+    75% { transform: scale(0.95, 1.05); }
+  }
+
+  @keyframes comingtop {
+    from { transform:translateY(-200px); }
+  to { transform:translateY(0px); }
+    
+  }
+  
+  @keyframes comingdown {
+    from { transform:translateY(200px); }
+  to { transform:translateY(0px); }
+    
+  }
+
+
+  @keyframes fade-in {
+    from { scale: 0; }
+  to { scale: 1; }
+    
+  }
