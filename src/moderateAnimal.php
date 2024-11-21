@@ -1,4 +1,4 @@
-<?php require_once(__DIR__ . "/../public/html/header-footer/header.php"); ?>
+<?php require_once(__DIR__ . "../../public/html/header-footer/header.php"); ?>
 
 <?php
 
@@ -53,19 +53,19 @@ if(isset($_FILES["imgAnimal"])){
 }
 
 
-// Mise à jour du rapport employé
+
 if (isset($postData["lastMeal"]) || isset($postData["lastMealDate"])) {
-    // Si lastMeal est vide, on passe à NULL
+    
     $lastMeal = !empty($postData['lastMeal']) ? $postData['lastMeal'] : NULL;
     $lastMealDate = !empty($postData['lastMealDate']) ? $postData['lastMealDate'] : NULL;
     
-// Vérifier si un enregistrement existe
+
 $stmt = $mysqlClient->prepare("SELECT * FROM employe_report WHERE animal_id = :id");
 $stmt->execute([':id' => $id]);
 $record = $stmt->fetch();
 
 if ($record) {
-    // Si un enregistrement existe, on fait une mise à jour
+    
     $stmt = $mysqlClient->prepare("
         UPDATE employe_report 
         SET last_meal = :lastMeal, 
@@ -73,14 +73,14 @@ if ($record) {
         WHERE animal_id = :id
     ");
 } else {
-    // Si aucun enregistrement n'existe, on insère
+    
     $stmt = $mysqlClient->prepare("
         INSERT INTO employe_report (animal_id, last_meal, last_passage) 
         VALUES (:id, :lastMeal, :lastMealDate)
     ");
 }
 
-// Exécuter la requête
+
 $stmt->execute([
     ':id' => $id,
     ':lastMeal' => $lastMeal,
@@ -88,7 +88,7 @@ $stmt->execute([
 ]);
 }
 
-// Mise à jour ou insertion dans le rapport vétérinaire
+
 if (
     isset($postData["animalEtat"]) || 
     isset($postData["animalDetail"]) || 
@@ -96,7 +96,7 @@ if (
     isset($postData["food"]) || 
     isset($postData["weight"])
 ) {
-    // Initialisation des valeurs avec `NULL` si les champs sont vides
+    
     
     $animalEtat = !empty($postData['animalEtat']) ? $postData['animalEtat'] : NULL;
     $animalDetail = !empty($postData['animalDetail']) ? $postData['animalDetail'] : NULL;
@@ -105,14 +105,14 @@ if (
     $weight = !empty($postData['weight']) ? $postData['weight'] : NULL;
 
     try {
-        // Vérifier si un enregistrement existe pour l'animal_id donné
+        
         $stmt = $mysqlClient->prepare("SELECT * FROM veteninary_report WHERE animal_id = :id");
         $stmt->execute([':id' => $id]);
         $record = $stmt->fetch();
 
 
         if ($record) {
-            // Si un enregistrement existe, effectuer une mise à jour
+            
                  $stmt = $mysqlClient->prepare("
                 UPDATE veteninary_report 
                 SET username = :username,
@@ -128,7 +128,7 @@ if (
             
             
         } else {
-            // Si aucun enregistrement n'existe, insérer une nouvelle ligne
+            
             $stmt = $mysqlClient->prepare("
                                 INSERT INTO veteninary_report (username,animal_id, date, etat, detail, food, weight) 
                                 VALUES (:username,:id, :lastPassage, :animalEtat, :animalDetail, :food, :weight)
@@ -138,7 +138,7 @@ if (
             
         }
 
-        // Exécuter la requête
+        
         $stmt->execute([
             ':username' => $username,
             ':id' => $id,
@@ -158,7 +158,7 @@ if (
 
 
 
-// Make new animal
+
 
 if(isset($postData["newAnimalName"]) 
 && isset($postData["newAnimalRace"]) 
@@ -201,7 +201,7 @@ if(isset($postData["newAnimalName"])
     move_uploaded_file($fileTmpPath, $uploadFilePath);
 }
 
-// Return dashbord
+
 
 header('Location: ' . $_SERVER['HTTP_REFERER'] . '#animalAncor');
 exit;

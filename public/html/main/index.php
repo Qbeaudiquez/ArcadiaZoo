@@ -4,12 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Zoo Arcadia -Accueil</title>
-    <link rel="stylesheet" href="/public/css/main/index.css">
-    <script src="/public/js/main/carousel.js" defer></script>
-    <script src="/public/js/main/ratingStar.js"></script>
+    <link rel="stylesheet" href="../../css/main/index.css">
+    <script src="../../js/main/carousel.js" defer></script>
+    <script src="../../js/main/ratingStar.js"></script>
 </head>
 <body>
-<?php require_once(__DIR__ . "/public/html/header-footer/header.html"); ?>
+<?php require_once(__DIR__ . "../../header-footer/header.php"); ?>
     <main id="scrolldown" class="main">
 
             <!-- First carousel -->
@@ -21,9 +21,9 @@
             </div>
             <div class="carousel" id="carousel1">
 
-                <button class="btn before"><img src="/asset/icon/arrow-left.svg" alt="Bouton précédent"></button>
+                <button class="btn before"><img src="../../../asset/icon/arrow-left.svg" alt="Bouton précédent"></button>
 
-                <button class="btn after"><img src="/asset/icon/arrow-right.svg" alt="Bouton suivant"></button>
+                <button class="btn after"><img src="../../../asset/icon/arrow-right.svg" alt="Bouton suivant"></button>
 
                 <?php foreach($services as $service):?>
                     <a href="../main/services.php?service=service<?= $service['service_id']?>#scrolldown"><img src="../../../asset/img_service/service<?= $service['service_id']?>.png" alt="Photo <?= $service['name']?>" class="carousel-image active" data-title="<?= $service['name']?>"></a>
@@ -40,9 +40,9 @@
             
             <div class="carousel" id="carousel2">
 
-                <button class="btn before"><img src="/zoo-arcadia/asset/icon/arrow-left.svg" alt="Bouton précédent"></button>
+                <button class="btn before"><img src="../../../asset/icon/arrow-left.svg" alt="Bouton précédent"></button>
 
-                <button class="btn after"><img src="/zoo-arcadia/asset/icon/arrow-right.svg" alt="Bouton suivant"></button>
+                <button class="btn after"><img src="../../../asset/icon/arrow-right.svg" alt="Bouton suivant"></button>
 
                 <?php foreach($habitats as $habitat):?>
                     <a href="../main/habitats.php?habitat=habitat<?= $habitat['habitat_id']?>#scrolldown"><img src="../../../asset/img_habitats/habitat<?= $habitat['habitat_id']?>.png" alt="Photo <?= $habitat['name']?>" class="carousel-image active" data-title="<?= $habitat['name']?>"></a>
@@ -112,6 +112,6 @@
               
         </div>
     </main>
-    <?php require_once(__DIR__ . "/../header-footer/footer.php"); ?>
+    <?php require_once(__DIR__ . "../../header-footer/footer.php"); ?>
 </body>
 </html>

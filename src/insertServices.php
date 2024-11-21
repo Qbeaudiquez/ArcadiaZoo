@@ -10,7 +10,7 @@
             <h3><?php echo htmlspecialchars($service["name"]); ?></h3>
 
             <?php if($_GET['service'] === "services" ){
-                echo "<a href='/zoo-arcadia/public/html/main/services.php?service={$service['identifier']}#scrolldown'>";}?>
+                echo "<a href='services.php?service={$service['identifier']}#scrolldown'>";}?>
                 <img src='../../../asset/img_service/<?php echo htmlspecialchars($service['identifier']); ?>.png' alt='photo service'>
             <?php if($_GET['service'] === "services" ){
                 echo "</a>";}?>

@@ -4,12 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Zoo Arcadia - Contact</title>
-    <link rel="stylesheet" href="/zoo-arcadia/public/css/main/config.css">
-    <link rel="stylesheet" href="/zoo-arcadia/public/css/main/contact.css">
+    <link rel="stylesheet" href="../../css/main/contact.css">
 </head>
 <body>
 
-    <?php require_once(__DIR__ . '/../header-footer/header.php')?>
+    <?php require_once(__DIR__ . '../../header-footer/header.php')?>
 
     <main id="scrolldown" class="main">
         <form class="formContact">
@@ -47,15 +46,15 @@
             <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d9362.139190398111!2d4.837290891474207!3d45.76356150704808!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sfr!2sfr!4v1731006814287!5m2!1sfr!2sfr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
             <div class="infoContainer">
                 <div class="infoIndividual">
-                    <img src="/zoo-arcadia/asset/icon/map-pin.svg" alt="logo adresse">
+                    <img src="../../../asset/icon/map-pin.svg" alt="logo adresse">
                     <p>54 Avenue des platanes 69001 Lyon</p>
                 </div>
                 <div class="infoIndividual">
-                    <img src="/zoo-arcadia/asset/icon/car-side-svgrepo-com.svg" alt="logo voiture" width="30px" height="30px">
+                    <img src="../../../asset/icon/car-side-svgrepo-com.svg" alt="logo voiture" width="30px" height="30px">
                     <p>Acces direct par la rocade Est sortie 5</p>
                 </div>
                 <div class="infoIndividual">
-                    <img src="/zoo-arcadia/asset/icon/bus-svgrepo-com.svg" alt="logo bus" width="30px" height="30px">
+                    <img src="../../../asset/icon/bus-svgrepo-com.svg" alt="logo bus" width="30px" height="30px">
                     <p>
                         Accès tram T2 : Arret Jean Macé<br>
                         Accès métro b : Arrêt Jean Macé<br>
@@ -66,7 +65,7 @@
         </section>
     </main>
 
-    <?php require_once(__DIR__ . '/../header-footer/footer.php')?>
+    <?php require_once(__DIR__ . '../../header-footer/footer.php')?>
 
 
 </body>

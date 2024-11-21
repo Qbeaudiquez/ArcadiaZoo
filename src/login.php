@@ -27,7 +27,7 @@ if (isset($postData["userName"]) && isset($postData["password"])) {
 <?php if (!isset($_SESSION['LOGGED_USER'])) : ?>
 
     <li>
-        <button class="connexionBtn link"><img src="/zoo-arcadia/asset/icon/log-out.svg" alt="logo connection" class="login"></button>
+        <button class="connexionBtn link"><img src="../../../asset/icon/log-in.svg" alt="logo connection" class="login"></button>
     </li>
 
     <li class="connexionContainer">
@@ -54,7 +54,7 @@ if (isset($postData["userName"]) && isset($postData["password"])) {
     </li>
     <li>
         <button class="deconnexionBtn link">
-            <a href="/zoo-arcadia/src/logout.php"><img src="/zoo-arcadia/asset/icon/log-out.svg" alt="logo deconnection" class="login"></a>
+            <a href="../../../src/logout.php"><img src="../../../asset/icon/log-out.svg" alt="logo deconnection" class="login"></a>
         </button>
     </li>
 

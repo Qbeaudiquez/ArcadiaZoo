@@ -4,12 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dashbord</title>
-    <script src="/zoo-arcadia/public/js/main/ratingStar.js" ></script>
+    <script src="../../js/main/ratingStar.js" ></script>
     <script src="../../js/dashbord/searchReportInput.js" defer></script>
     <link rel="stylesheet" href="../../css/main/dashbord.css">
 </head>
 <body>
-<?php require_once(__DIR__ . "/../header-footer/header.php"); ?>
+<?php require_once(__DIR__ . "../../header-footer/header.php"); ?>
 <?php 
 if(isset($_SESSION['LOGGED_ROLE_ID'])){
     $adminAccess = $_SESSION['LOGGED_ROLE_ID'] === 1;
@@ -132,7 +132,7 @@ if(isset($_SESSION['LOGGED_ROLE_ID'])){
     <h3 class="containerTitle" id="serviceAncor">Services</h3>
     <div class='dashbordContainer services'>
     <div class="serviceContainer">
-        <?php require_once(__DIR__ . "/../../../src/insertServices.php"); ?>
+        <?php require_once(__DIR__ . "../../../../src/insertServices.php"); ?>
     </div>
 
 <!-- Créer un nouveau compte -->
@@ -156,7 +156,7 @@ if(isset($_SESSION['LOGGED_ROLE_ID'])){
 
 <?php if($adminAccess):?>
     <h3 class="containerTitle" id="newUserAncor">Créer un nouvel utilisateur</h3>
-    <?php require_once(__DIR__ . "/../../../src/insertUserCreation.php"); ?>
+    <?php require_once(__DIR__ . "../../../../src/insertUserCreation.php"); ?>
 <?php endif?>
 
 <!-- Habitat -->
@@ -164,7 +164,7 @@ if(isset($_SESSION['LOGGED_ROLE_ID'])){
     <h3 class="containerTitle" id="habitatAncor">Habitats</h3>
 <div class="dashbordContainer habitat">
     <div class="habitatContainer">
-        <?php require_once(__DIR__ . "/../../../src/insertHabitats.php"); ?>
+        <?php require_once(__DIR__ . "../../../../src/insertHabitats.php"); ?>
     </div>
     <?php if($adminAccess):?>
     <div class="makeContainer">
@@ -196,7 +196,7 @@ if(isset($_SESSION['LOGGED_ROLE_ID'])){
             <h4>Recherchez un animal : </h4>
             <input type="text" name="" id="searchInput" placeholder="Nom de l'animal">
         </div>
-        <?php require_once(__DIR__ . "/../../../src/insertAnimalForm.php"); ?>
+        <?php require_once(__DIR__ . "../../../../src/insertAnimalForm.php"); ?>
         <?php if($adminAccess):?>
     
     <div class="makeContainer animal">
@@ -292,6 +292,6 @@ if(isset($_SESSION['LOGGED_ROLE_ID'])){
 
 
 </main>
-<?php require_once(__DIR__ . "/../header-footer/footer.php"); ?>
+<?php require_once(__DIR__ . "../../header-footer/footer.php"); ?>
 </body>
 </html>

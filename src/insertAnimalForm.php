@@ -29,7 +29,7 @@
                         <?php endif; ?>
                     </h5>
 
-                    <img class="imgAnimal" src="/zoo-arcadia/asset/img_animals/<?= $animal["animal_id"] ?>.png" alt="photo <?= htmlspecialchars($animal["race"]) ?>">
+                    <img class="imgAnimal" src="../../../asset/img_animals/<?= $animal["animal_id"] ?>.png" alt="photo <?= htmlspecialchars($animal["race"]) ?>">
 
                     <?php if ($adminAccess): ?>
                         <input type="file" name="imgAnimal" id="imgAnimal" class="animalImgUpdate">

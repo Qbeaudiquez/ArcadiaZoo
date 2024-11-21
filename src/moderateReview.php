@@ -1,4 +1,4 @@
-<?php require_once(__DIR__ . "/../public/html/header-footer/header.php"); ?>
+<?php require_once(__DIR__ . "../../public/html/header-footer/header.php"); ?>
 
 <?php
 if (!isset($_POST['action']) || !isset($_POST['id'])) {

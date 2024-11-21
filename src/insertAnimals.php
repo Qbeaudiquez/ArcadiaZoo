@@ -1,4 +1,3 @@
-<script src="/zoo-arcadia/public/js/habitats/targetValue.js"></script>
 <?php if (isset($_GET["habitat"])): ?>
     <?php foreach ($habitats as $habitat): ?>
         <?php $habitat["identifier"] = "habitat{$habitat['habitat_id']}"; ?>
