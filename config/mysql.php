@@ -10,8 +10,8 @@ $password = $dbparts['pass'];
 $database = ltrim($dbparts['path'],'/');
 }
 
-const MYSQL_HOST = 'localhost';
-const MYSQL_PORT = 3306;
-const MYSQL_NAME = 'zoo_arcadia';
-const MYSQL_USER = 'root';
-const MYSQL_PASSWORD = '';
+$hostname = 'localhost';
+$port = 3306;
+$database = 'zoo_arcadia';
+$username = 'root';
+$password = '';
